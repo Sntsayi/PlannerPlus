@@ -19,7 +19,7 @@ rightSideBarBtn.forEach((item) => {
   });
 });
 
-// logic of RootinROzaneh
+// logic of RootinRozaneh
 let filteredCheckBox = [];
 
 inputRootin.forEach(function (checkbox) {

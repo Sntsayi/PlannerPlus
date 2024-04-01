@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./style.css" />
     <title>Planner Plus</title>
   </head>
-  <body class="bg-black text-white">
+  <body class="bg-black text-white scroll-smooth">
     <header
       class="flex justify-between items-center p-1 px-2 pr-10 bg-black-Secondary"
     >
@@ -52,8 +52,7 @@
         </div>
 
         <div class="flex gap-3 mr-12">
-          <img src="" alt="" />
-          <button>
+          <button title="هشدار">
             <svg
               width="48"
               height="48"
@@ -78,7 +77,8 @@
               />
             </svg>
           </button>
-          <button>
+          <!-- <span>راهنما</span> -->
+          <button title="پشتیبانی">
             <svg
               width="48"
               height="48"
@@ -104,7 +104,7 @@
             </svg>
           </button>
           <button
-            class="p-3 px-5 bg-orange-Secondary flex items-center justify-center gap-2 rounded-lg"
+            class="p-3 px-5 bg-orange-Secondary flex items-center justify-center gap-2 rounded-lg hover:bg-blue-Secondary transition-all duration-300 ease-in"
           >
             <span class="">
               <svg
@@ -155,13 +155,13 @@
       </div>
     </header>
     <!-- we have rightSidebar and leftSidebar and mainCenter -->
-    <div class="w-full min-h-screen flex">
+    <div class="w-full flex">
       <!-- rightSideBar -->
       <aside
-        class="w-1/6 bg-black-Secondary text-gray-SecondaryColor py-5 transition-all duration-500"
+        class="w-1/6 bg-black-Secondary text-gray-SecondaryColor py-5 transition-all duration-500 sticky top-0 h-fit"
       >
         <!-- first section of rightSaideBar -->
-        <form action="" onsubmit="(e)=>{e.preveentEvent()}">
+        <form action="">
           <div class="space-y-6">
             <span class="text-sm px-4">منوی اصلی</span>
             <button
@@ -485,9 +485,11 @@
           <span class="text-xl font-semibold text-gray-SecondaryColor"
             >آمار کلی پروژه :
           </span>
-          <div class="grid grid-cols-2 my-5 gap-x-5 gap-y-3">
+          <form class="grid grid-cols-2 my-5 gap-x-5 gap-y-3">
             <!-- one -->
-            <div class="bg-blue-Secondary p-7 rounded-xl">
+            <button
+              class="bg-blue-Secondary p-7 rounded-xl hover:-translate-y-3 transition-all duration-200"
+            >
               <span>
                 <svg
                   width="56"
@@ -543,10 +545,12 @@
                 </span>
                 <span class="font-bold text-3xl tracking-widest">8893</span>
               </div>
-            </div>
+            </button>
             <!-- two -->
 
-            <div class="bg-orange-Secondary p-7 rounded-xl">
+            <button
+              class="bg-orange-Secondary p-7 rounded-xl hover:-translate-y-3 transition-all duration-200"
+            >
               <span>
                 <svg
                   width="56"
@@ -606,10 +610,12 @@
                 </span>
                 <span class="font-bold text-3xl tracking-widest">8893</span>
               </div>
-            </div>
+            </button>
 
             <!-- three -->
-            <div class="bg-gray-SecondaryColor p-7 rounded-xl">
+            <button
+              class="bg-gray-SecondaryColor p-7 rounded-xl hover:-translate-y-2 transition-all duration-200"
+            >
               <div class="flex items-center gap-2">
                 <span>
                   <svg
@@ -653,10 +659,12 @@
               <div
                 class="h-4/5 w-full mt-1 bg-orange-Secondary rounded-xl"
               ></div>
-            </div>
+            </button>
 
             <!-- four -->
-            <div class="bg-green-500 p-7 rounded-xl">
+            <button
+              class="bg-green-500 p-7 rounded-xl hover:-translate-y-2 transition-all duration-200"
+            >
               <span>
                 <svg
                   width="56"
@@ -712,15 +720,15 @@
                 </span>
                 <span class="font-bold text-3xl tracking-widest">8893</span>
               </div>
-            </div>
-          </div>
+            </button>
+          </form>
         </section>
         <!-- section1 -->
 
         <!-- section2 -->
         <section class="mt-10">
           <span class="text-xl font-semibold text-gray-SecondaryColor"
-            >روتین روزانه:</span
+            >روتین روزانه :</span
           >
           <form action="" class="mt-5 bg-gray-SecondaryColor p-10 rounded-xl">
             <div class="grid grid-cols-3 gap-4">
@@ -992,7 +1000,11 @@
               class="border border-b-4 border-gray-200 w-full inline-block text-left rounded-lg relative before:absolute before:-bottom-1 before:-left-1 before:rounded-lg before:border before:border-b-4 before:border-orange-Secondary before:w-1/2"
             ></span>
             <div class="flex justify-between mt-3">
-              <button class="text-orange-Secondary">پروفایل اعضای گروه</button>
+              <button
+                class="text-orange-Secondary hover:text-blue-Secondary transition-all duration-300"
+              >
+                پروفایل اعضای گروه
+              </button>
               <span class="font-bold">اسم پروژه</span>
             </div>
           </div>
@@ -1005,7 +1017,11 @@
               class="border border-b-4 border-gray-200 w-full inline-block text-left rounded-lg relative before:absolute before:-bottom-1 before:-left-1 before:rounded-lg before:border before:border-b-4 before:border-green-500 before:w-93%"
             ></span>
             <div class="flex justify-between mt-3">
-              <button class="text-orange-Secondary">پروفایل اعضای گروه</button>
+              <button
+                class="text-orange-Secondary hover:text-blue-Secondary transition-all duration-300"
+              >
+                پروفایل اعضای گروه
+              </button>
               <span class="font-bold">اسم پروژه</span>
             </div>
           </div>
@@ -1018,7 +1034,11 @@
               class="border border-b-4 border-gray-200 w-full inline-block text-left rounded-lg relative before:absolute before:-bottom-1 before:-left-1 before:rounded-lg before:border before:border-b-4 before:border-green-400 before:w-3/4"
             ></span>
             <div class="flex justify-between mt-3">
-              <button class="text-orange-Secondary">پروفایل اعضای گروه</button>
+              <button
+                class="text-orange-Secondary hover:text-blue-Secondary transition-all duration-300"
+              >
+                پروفایل اعضای گروه
+              </button>
               <span class="font-bold">اسم پروژه</span>
             </div>
           </div>
@@ -1027,7 +1047,9 @@
         <!-- section4 -->
       </main>
       <!-- leftSidebar -->
-      <aside class="w-1/4 bg-black-Secondary text-white m-2 rounded-3xl p-4">
+      <aside
+        class="w-1/4 bg-black-Secondary text-white m-2 rounded-3xl p-4 sticky top-0 h-fit"
+      >
         <!-- first section of leftSidebar -->
         <div class="flex flex-col gap-3 items-center">
           <img
@@ -1121,7 +1143,7 @@
             <div class="border border-gray-400 w-full my-2"></div>
 
             <button
-              class="font-bold text-gray-200 bg-orange-Secondary p-2 px-4 rounded-lg"
+              class="font-bold text-gray-200 bg-orange-Secondary p-2 px-4 rounded-lg hover:bg-blue-Secondary transition-all duration-300"
             >
               پروفایل اعضای گروه
             </button>
@@ -1151,7 +1173,7 @@
             <div class="border border-gray-400 w-full my-2"></div>
 
             <button
-              class="font-bold text-gray-200 bg-orange-Secondary p-2 px-4 rounded-lg"
+              class="font-bold text-gray-200 bg-orange-Secondary p-2 px-4 rounded-lg hover:bg-blue-Secondary transition-all duration-300"
             >
               پروفایل اعضای گروه
             </button>
@@ -1181,7 +1203,7 @@
             <div class="border border-gray-400 w-full my-2"></div>
 
             <button
-              class="font-bold text-gray-200 bg-orange-Secondary p-2 px-4 rounded-lg"
+              class="font-bold text-gray-200 bg-orange-Secondary p-2 px-4 rounded-lg hover:bg-blue-Secondary transition-all duration-300"
             >
               پروفایل اعضای گروه
             </button>
@@ -1190,6 +1212,9 @@
         </div>
       </aside>
     </div>
+
     <script src="./app.js"></script>
   </body>
 </html>
+
+<!-- https://github.com/Sntsayi/PlannerPlus.git -->
