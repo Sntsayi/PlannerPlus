@@ -165,3 +165,54 @@ document.getElementById("nextMonthBtn").addEventListener("click", () => {
   today.setMonth(today.getMonth() + 1);
   displayCalendar(today.getFullYear(), today.getMonth() + 1);
 });
+
+//  for logic of Single webPage
+const allPages = {
+  main: {
+    page: "./index.html",
+    title: "Planner Plus",
+  },
+
+  calender: {
+    page: "./calender.html",
+    title: "Calender Section",
+  },
+
+  helpCenter: {
+    page: "./helpCenter.html",
+    title: "Help And Center Section",
+  },
+
+  job: {
+    page: "./job.html",
+    title: "Job Section",
+  },
+
+  projects: {
+    page: "./projects.html",
+    title: "Project Section",
+  },
+
+  setting: {
+    page: "./setting.html",
+    title: "Setting Section",
+  },
+
+  tasks: {
+    page: "./tasks.html",
+    title: "Tasks Section",
+  },
+
+  teamMate: {
+    page: "./teamMate.html",
+    title: "TeamMate Section",
+  },
+};
+
+let rightLinks = document.querySelectorAll(".nav-right");
+let centerContent = document.getElementById("center-Content-Container");
+
+console.log(rightLinks);
+console.log(centerContent);
+
+//  for logic of Single webPage

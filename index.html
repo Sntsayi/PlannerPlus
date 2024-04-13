@@ -162,10 +162,11 @@
       >
         <!-- first section of rightSaideBar -->
         <form action="">
-          <div class="space-y-6">
+          <div class="space-y-6 [&>*:hover]:cursor-pointer">
             <span class="text-sm px-4">منوی اصلی</span>
-            <button
-              class="flex gap-3 w-full py-3 pr-4 hover:btn-hover btn-click transition-all duration-300"
+            <a
+              href="#main"
+              class="nav-right flex gap-3 w-full py-3 pr-4 hover:btn-hover btn-click transition-all duration-300"
               id="rightSideBarBtn"
             >
               <span
@@ -199,10 +200,11 @@
                 </svg>
               </span>
               <span>مشاهده کلی</span>
-            </button>
+            </a>
 
-            <button
-              class="flex gap-3 hover:btn-hover w-full py-3 pr-4 transition-all duration-300"
+            <a
+              href="#tasks"
+              class="nav-right flex gap-3 hover:btn-hover w-full py-3 pr-4 transition-all duration-300"
               id="rightSideBarBtn"
             >
               <span>
@@ -221,10 +223,11 @@
                 </svg>
               </span>
               <span>تسک های من</span>
-            </button>
+            </a>
 
-            <button
-              class="flex gap-3 hover:btn-hover w-full py-3 pr-4 transition-all duration-300"
+            <a
+              href="#projects"
+              class="nav-right flex gap-3 hover:btn-hover w-full py-3 pr-4 transition-all duration-300"
               id="rightSideBarBtn"
             >
               <span>
@@ -258,10 +261,11 @@
                 </svg>
               </span>
               <span>پروژه ها</span>
-            </button>
+            </a>
 
-            <button
-              class="flex gap-3 hover:btn-hover w-full py-3 pr-4 transition-all duration-300"
+            <a
+              href="#teamMate"
+              class="nav-right flex gap-3 hover:btn-hover w-full py-3 pr-4 transition-all duration-300"
               id="rightSideBarBtn"
             >
               <span>
@@ -305,10 +309,11 @@
                 </svg>
               </span>
               <span>اعضای تیم</span>
-            </button>
+            </a>
 
-            <button
-              class="flex gap-3 hover:btn-hover w-full py-3 pr-4 transition-all duration-300"
+            <a
+              href="#calender"
+              class="nav-right flex gap-3 hover:btn-hover w-full py-3 pr-4 transition-all duration-300"
               id="rightSideBarBtn"
             >
               <span>
@@ -332,10 +337,11 @@
                 </svg>
               </span>
               <span>تقویم</span>
-            </button>
+            </a>
 
-            <button
-              class="flex gap-3 hover:btn-hover w-full py-3 pr-4 transition-all duration-300"
+            <a
+              href="job"
+              class="nav-right flex gap-3 hover:btn-hover w-full py-3 pr-4 transition-all duration-300"
               id="rightSideBarBtn"
             >
               <span>
@@ -354,16 +360,17 @@
                 </svg>
               </span>
               <span>شغل</span>
-            </button>
+            </a>
           </div>
 
           <div class="border border-gray-SecondaryColor w-full my-2"></div>
 
           <!-- second section of rightSaideBar -->
-          <div class="space-y-6">
+          <div class="space-y-6 [&>*:hover]:cursor-pointer">
             <span class="text-sm px-4">پروژه های اخیر</span>
-            <button
-              class="flex gap-3 hover:btn-hover w-full py-3 pr-4 transition-all duration-300"
+            <a
+              href="#"
+              class="nav-right flex gap-3 hover:btn-hover w-full py-3 pr-4 transition-all duration-300"
               id="rightSideBarBtn"
             >
               <span>
@@ -378,10 +385,11 @@
                 </svg>
               </span>
               <span>پروژه موز</span>
-            </button>
+            </a>
 
-            <button
-              class="flex gap-3 hover:btn-hover w-full py-3 pr-4 transition-all duration-300"
+            <a
+              href="#"
+              class="nav-right flex gap-3 hover:btn-hover w-full py-3 pr-4 transition-all duration-300"
               id="rightSideBarBtn"
             >
               <span>
@@ -396,10 +404,11 @@
                 </svg>
               </span>
               <span>پروژه هلو</span>
-            </button>
+            </a>
 
-            <button
-              class="flex gap-3 hover:btn-hover w-full py-3 pr-4 transition-all duration-300"
+            <a
+              href="#"
+              class="nav-right flex gap-3 hover:btn-hover w-full py-3 pr-4 transition-all duration-300"
               id="rightSideBarBtn"
             >
               <span>
@@ -414,16 +423,17 @@
                 </svg>
               </span>
               <span>پروژه سیر همت</span>
-            </button>
+            </a>
           </div>
 
           <div class="border border-gray-SecondaryColor w-full my-2"></div>
 
-          <!-- third section of rightSaideBar -->
-          <div class="space-y-6">
+          <!-- third section of rightSaideBar  -->
+          <div class="space-y-6 [&>*:hover]:cursor-pointer">
             <span class="text-sm px-4">کمک & پشتیبانی</span>
-            <button
-              class="flex gap-3 hover:btn-hover w-full py-3 pr-4 transition-all duration-300"
+            <a
+              href="#helpCenter"
+              class="nav-right flex gap-3 hover:btn-hover w-full py-3 pr-4 transition-all duration-300"
               id="rightSideBarBtn"
             >
               <span>
@@ -452,13 +462,14 @@
                 </svg>
               </span>
               <span>کمک & مرکز</span>
-            </button>
+            </a>
 
-            <button
-              class="flex gap-3 hover:btn-hover w-full py-3 pr-4 transition-all duration-300"
+            <a
+              href="#setting"
+              class="nav-right flex gap-3 hover:btn-hover w-full py-3 pr-4 transition-all duration-300"
               id="rightSideBarBtn"
             >
-              <butt>
+              <span>
                 <svg
                   width="24"
                   height="24"
@@ -472,14 +483,14 @@
                     fill-opacity="0.6"
                   />
                 </svg>
-              </butt>
+              </span>
               <span>تنظیمات</span>
-            </button>
+            </a>
           </div>
         </form>
       </aside>
       <!-- center -->
-      <main class="w-2/3 text-white m-2 p-8">
+      <main id="center-Content-Container" class="w-2/3 text-white m-2 p-8">
         <!-- section1 -->
         <section>
           <span class="text-xl font-semibold text-gray-SecondaryColor"
