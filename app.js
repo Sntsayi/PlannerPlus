@@ -1,23 +1,9 @@
 "use strict";
 
-let rightSideBarBtn = [...document.querySelectorAll("#rightSideBarBtn")];
+// let rightSideBarBtn = [...document.querySelectorAll("#rightSideBarBtn")];
 
 let inputRootin = [...document.querySelectorAll("input[type=checkbox]")];
 let resultRootin = document.querySelector("#resultRootin");
-
-// logic of click in rightSideBar
-rightSideBarBtn.forEach((item) => {
-  item.addEventListener("click", (e) => {
-    e.preventDefault();
-    item.classList.add("btn-click");
-
-    rightSideBarBtn.forEach((item2) => {
-      if (item2 !== item) {
-        item2.classList.remove("btn-click");
-      }
-    });
-  });
-});
 
 // logic of RootinRozaneh
 let filteredCheckBox = [];
@@ -209,10 +195,78 @@ const allPages = {
   },
 };
 
-let rightLinks = document.querySelectorAll(".nav-right");
+let navRightLinks = document.querySelectorAll(".nav-right");
 let centerContent = document.getElementById("center-Content-Container");
 
-console.log(rightLinks);
+console.log(navRightLinks);
 console.log(centerContent);
 
+navRightLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    //logic of the border-left-orange
+    link.classList.add("btn-click");
+    navRightLinks.forEach((link2) => {
+      if (link2 !== link) {
+        link2.classList.remove("btn-click");
+      }
+    });
+    // logic of the border-left-orange
+
+    const href = link.getAttribute("href").substring(1);
+    changeUrkRoute(href);
+  });
+});
+
+const changeUrkRoute = (href) => {
+  window.history.pushState({ href }, "", `#${href}`);
+  changePageContent(href);
+};
+
+const changePageContent = async (href) => {
+  const { page, title } = allPages[href];
+
+  //fetch to current page
+  const res = await fetch(page);
+  const html = await res.text();
+
+  //change html format text into valid html
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(html, "text/html");
+
+  // check if new content is home page or another pages
+  const existHeader = doc.body.querySelector("#right-SideBar-Layout");
+
+  // if it was home page, just add main content (not header)
+
+  if (existHeader) {
+    const homeMainContent = doc.body.querySelector("#center-Content-Container");
+    centerContent.innerHTML = homeMainContent.outerHTML;
+  } else {
+    centerContent.innerHTML = doc.body.outerHTML;
+  }
+  document.title = title;
+  navRightLinks.forEach((link) => {
+    link.classList.remove("btn-click");
+    if (link.getAttribute("href").substring(1) === href) {
+      link.classList.add("btn-click");
+    }
+  });
+};
+
+//update content when click in go back button
+window.addEventListener("popstate", (e) => {
+  if (e.state === null) {
+    changePageContent("home");
+  } else {
+    changePageContent(e.state.href);
+  }
+});
+
+// update last loaded content when refresh
+window.addEventListener("DOMContentLoaded", () => {
+  const initiaState = location.hash ? location.hash.substring(1) : "home";
+
+  changePageContent(initiaState);
+});
 //  for logic of Single webPage
