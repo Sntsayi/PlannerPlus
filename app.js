@@ -4,6 +4,21 @@
 
 let inputRootin = [...document.querySelectorAll("input[type=checkbox]")];
 let resultRootin = document.querySelector("#resultRootin");
+const projectBtn = document.querySelector("#projectBtn");
+const projectShown = document.querySelector(".projectShown");
+
+// forAddNewTask
+const htmlTag = document.querySelector("html");
+const headerTag = document.querySelector("header");
+const rightSideBarBtn = document.querySelector(".right-SideBar-Layout");
+const leftSideBarBtn = document.querySelector(".left-SideBar-Layout");
+// forAddNewTask
+
+// for tbn of the project
+projectBtn.addEventListener("click", () => {
+  projectShown.classList.toggle("hidden");
+});
+// for tbn of the project
 
 // logic of RootinRozaneh
 let filteredCheckBox = [];
@@ -244,6 +259,36 @@ const changePageContent = async (href) => {
     centerContent.innerHTML = homeMainContent.outerHTML;
   } else {
     centerContent.innerHTML = doc.body.outerHTML;
+    // for taskPageLogic
+    if (doc.title == "task") {
+      // for clickedAddNewTaksBtn
+      const addNewTask = centerContent.querySelector(".addNewTask");
+      const newTaskWindow = centerContent.querySelector(".newTaskWindow");
+      const centerElements = centerContent.querySelector(".centerElements");
+      const closeNewTaskWindow = centerContent.querySelector(
+        ".closeNewTaskWindow"
+      );
+
+      console.log(addNewTask);
+      addNewTask.addEventListener("click", () => {
+        newTaskWindow.classList.remove("translate-x-400%");
+        htmlTag.classList.add("overflow-y-hidden");
+        headerTag.classList.add("blur-sm");
+        rightSideBarBtn.classList.add("blur-md");
+        centerElements.classList.add("blur-md");
+        leftSideBarBtn.classList.add("blur-md");
+      });
+      // for closeTheAddNewTaskWindow
+      closeNewTaskWindow.addEventListener("click", () => {
+        newTaskWindow.classList.add("translate-x-400%");
+        htmlTag.classList.remove("overflow-y-hidden");
+        headerTag.classList.remove("blur-sm");
+        rightSideBarBtn.classList.remove("blur-md");
+        centerElements.classList.remove("blur-md");
+        leftSideBarBtn.classList.remove("blur-md");
+      });
+    }
+    // for taskPageLogic
   }
   document.title = title;
   navRightLinks.forEach((link) => {
@@ -270,3 +315,21 @@ window.addEventListener("DOMContentLoaded", () => {
   changePageContent(initiaState);
 });
 //  for logic of Single webPage
+
+// for taskPage
+// fetch("./tasks.html")
+//   .then((res) => res.text())
+//   .then((htmlContent) => {
+//     const parser = new DOMParser();
+//     const doc = parser.parseFromString(htmlContent, "text/html");
+//     const addNewTaskBtn = doc.body.querySelector(".addNewTask");
+//     // console.log(addNewTaskBtn);
+//     addNewTaskBtn.addEventListener("click", () => {
+//       alert("hello world");
+//     });
+//   })
+//   .catch((error) => {
+//     console.error("Error fetching or parsing HTML:", error);
+//   });
+
+// for taskPage

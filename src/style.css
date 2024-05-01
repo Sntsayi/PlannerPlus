@@ -9,8 +9,9 @@
   .btn-hover {
     @apply bg-gray-SecondaryColor text-white;
   }
-  .tooltip {
+
+  /* .tooltip {
     @apply invisible w-32 bg-white text-black text-center rounded-lg py-2
     absolute z-10 top-150% left-1/2 ml-14;
-  }
+  } */
 }

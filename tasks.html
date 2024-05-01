@@ -3,414 +3,515 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task</title>
   </head>
-  <body>
-    <section
-      class="grid grid-cols-2 gap-3 [&>*]:bg-gray-SecondaryColor [&>*]:rounded-md [&>*]:p-2 [&>*]:pt-3"
-    >
-      <!-- will  -->
-      <div>
-        <!-- top -->
-        <div class="flex justify-between items-center">
-          <span>
-            <span class="text-white text-lg">آینده</span>
-            <span
-              class="p-0.5 px-3 rounded-lg inline-block text-green-400 font-bold border-2 border-green-400"
-            >
-              1
-            </span>
-          </span>
-
-          <i class="fa-solid fa-angle-right ml-3"></i>
-        </div>
-        <!-- boxes -->
-        <div class="flex flex-col">
-          <!-- box -->
-          <div class="bg-black p-2 rounded-xl mt-4">
-            <div class="flex justify-between items-center">
-              <button class="text-2xl font-bold">...</button>
-              <div class="relative">
-                <img
-                  class="w-10 h-10 rounded-full object-cover z-50"
-                  src="./assets/img.jpg"
-                  alt=""
-                />
-                <img
-                  class="absolute w-10 h-10 rounded-full object-cover top-0 left-5"
-                  src="./assets/ppt-picture-GAM98 (15).jpg"
-                  alt=""
-                />
-              </div>
-            </div>
-
-            <p class="text-lg font-bold my-3">موضوع تسک</p>
-
-            <div
-              class="flex gap-2 [&>*]:p-2 [&>*]:rounded-md [&>*]:inline-block my-3"
-            >
-              <span class="bg-blue-500">درج محتوا</span>
-              <span class="bg-red-400 text-red-600 border border-red-700"
-                >#354545</span
-              >
-              <span class="bg-green-300">content</span>
-              <div class="relative">
-                <i class="fa-regular fa-message text-2xl"></i>
-                <span
-                  class="absolute bg-purple-700 p-1 px-3 rounded-full text-white inline-block -top-3 -left-1"
-                  >3</span
-                >
-              </div>
-            </div>
-
-            <span
-              class="p-3 py-1 inline-block bg-blue-400 rounded-xl my-4 mt-1"
-            >
-              <span class="text-center"
-                >در حال انجام
-                <span> <i class="fa-solid fa-circle-left text-lg"></i> </span
-              ></span>
-            </span>
-
-            <div
-              class="flex gap-1 [&>*]:p-2 [&>*]:rounded-md [&>*]:bg-gray-SecondaryColor"
-            >
-              <span>1403/01/31</span>
-              <span>1403/2/25</span>
-            </div>
-          </div>
-          <!-- box -->
-
-          <!-- box -->
-          <div class="bg-black p-2 rounded-xl mt-4">
-            <div class="flex justify-between items-center">
-              <button class="text-2xl font-bold">...</button>
-              <div class="relative">
-                <img
-                  class="w-10 h-10 rounded-full object-cover z-50"
-                  src="./assets/img.jpg"
-                  alt=""
-                />
-                <img
-                  class="absolute w-10 h-10 rounded-full object-cover top-0 left-5"
-                  src="./assets/ppt-picture-GAM98 (15).jpg"
-                  alt=""
-                />
-              </div>
-            </div>
-
-            <p class="text-lg font-bold my-3">موضوع تسک</p>
-
-            <div
-              class="flex gap-2 [&>*]:p-2 [&>*]:rounded-md [&>*]:inline-block my-3"
-            >
-              <span class="bg-blue-500">درج محتوا</span>
-              <span class="bg-red-400 text-red-600 border border-red-700"
-                >#354545</span
-              >
-              <span class="bg-green-300">content</span>
-              <div class="relative">
-                <i class="fa-regular fa-message text-2xl"></i>
-                <span
-                  class="absolute bg-purple-700 p-1 px-3 rounded-full text-white inline-block -top-3 -left-1"
-                  >3</span
-                >
-              </div>
-            </div>
-
-            <span
-              class="p-3 py-1 inline-block bg-blue-400 rounded-xl my-4 mt-1"
-            >
-              <span class="text-center"
-                >در حال انجام
-                <span> <i class="fa-solid fa-circle-left text-lg"></i> </span
-              ></span>
-            </span>
-
-            <div
-              class="flex gap-1 [&>*]:p-2 [&>*]:rounded-md [&>*]:bg-gray-SecondaryColor"
-            >
-              <span>1403/01/31</span>
-              <span>1403/2/25</span>
-            </div>
-          </div>
-          <!-- box -->
-        </div>
-        <!-- boxes -->
+  <body class="">
+    <div class="">
+      <div class="flex justify-between items-center">
+        <span class="text-lg font-extrabold text-gray-300"
+          >تسک های موجود :</span
+        >
+        <button
+          id="addNewTask"
+          class="addNewTask px-4 py-3 bg-gray-400 font-semibold rounded-lg"
+        >
+          افزودن تسک جدید
+        </button>
       </div>
-      <!-- continue -->
-      <div>
-        <div class="flex justify-between items-center">
-          <span>
-            <span class="text-white text-lg">در حال انجام</span>
-            <span
-              class="p-0.5 px-3 rounded-lg inline-block text-green-400 font-bold border-2 border-green-400"
-            >
-              1
-            </span>
-          </span>
+      <!-- for newTask window -->
 
-          <i class="fa-solid fa-angle-right ml-3"></i>
+      <div
+        class="newTaskWindow translate-x-400% transition-all duration-700 ease-linear p-8 absolute top-10 w-3/5 h-1/3 z-50 rounded-lg bg-black"
+      >
+        <div class="text-lg font-bold flex justify-between">
+          <span>ایجاد تسک جدید</span>
+          <button>
+            <i class="closeNewTaskWindow fa-solid fa-xmark text-3xl"></i>
+          </button>
         </div>
-        <!-- boxes -->
-        <div class="flex flex-col">
-          <!-- box -->
-          <div class="bg-black p-2 rounded-xl mt-4">
-            <div class="flex justify-between items-center">
-              <button class="text-2xl font-bold">...</button>
-              <div class="relative">
-                <img
-                  class="w-10 h-10 rounded-full object-cover z-50"
-                  src="./assets/img.jpg"
-                  alt=""
-                />
-                <img
-                  class="absolute w-10 h-10 rounded-full object-cover top-0 left-5"
-                  src="./assets/ppt-picture-GAM98 (15).jpg"
-                  alt=""
-                />
-              </div>
-            </div>
-
-            <p class="text-lg font-bold my-3">موضوع تسک</p>
-
-            <div
-              class="flex gap-2 [&>*]:p-2 [&>*]:rounded-md [&>*]:inline-block my-3"
+        <form action="#" class="mt-5 grid grid-cols-3 gap-2">
+          <div class="flex flex-col">
+            <label for="" class="inline-block py-2">مربوط به کاربر :</label>
+            <select
+              name=""
+              id=""
+              class="px-2 py-1.5 rounded-lg text-red-600 outline-none"
             >
-              <span class="bg-blue-500">درج محتوا</span>
-              <span class="bg-red-400 text-red-600 border border-red-700"
-                >#354545</span
-              >
-              <span class="bg-green-300">content</span>
-              <div class="relative">
-                <i class="fa-regular fa-message text-2xl"></i>
-                <span
-                  class="absolute bg-purple-700 p-1 px-3 rounded-full text-white inline-block -top-3 -left-1"
-                  >3</span
-                >
-              </div>
-            </div>
-
-            <span
-              class="p-3 py-1 inline-block bg-blue-400 rounded-xl my-4 mt-1"
-            >
-              <span class="text-center"
-                >در حال انجام
-                <span> <i class="fa-solid fa-circle-left text-lg"></i> </span
-              ></span>
-            </span>
-
-            <div
-              class="flex gap-1 [&>*]:p-2 [&>*]:rounded-md [&>*]:bg-gray-SecondaryColor"
-            >
-              <span>1403/01/31</span>
-              <span>1403/2/25</span>
-            </div>
+              <option value="">مدیر پروژه</option>
+              <option value="">محسن</option>
+              <option value="">حسین</option>
+              <option value="">همت</option>
+            </select>
           </div>
-          <!-- box -->
-        </div>
-        <!-- boxes -->
+
+          <div class="flex flex-col">
+            <label for="" class="inline-block py-2">مهلت انجام :</label>
+            <input
+              type="date"
+              class="px-2 py-1.5 rounded-lg text-red-600 outline-none"
+            />
+          </div>
+
+          <div class="flex flex-col">
+            <label for="" class="inline-block py-2">زمان شروع نمایش :</label>
+            <input
+              type="date"
+              class="px-2 py-1.5 rounded-lg text-red-600 outline-none"
+            />
+          </div>
+
+          <div class="flex flex-col">
+            <label for="" class="inline-block py-2"> اولویت(بالاترین):</label>
+
+            <select
+              name=""
+              id=""
+              class="px-2 py-1.5 rounded-lg text-red-600 outline-none"
+            >
+              <option value="">خیلی زیاد</option>
+              <option value="">زیاد</option>
+              <option value="">متوسط</option>
+              <option value="">کم</option>
+            </select>
+          </div>
+
+          <div class="flex flex-col">
+            <label for="" class="inline-block py-2"> کلمات کلیدی :</label>
+            <select
+              name=""
+              id=""
+              class="px-2 py-1.5 rounded-lg text-red-600 outline-none"
+            >
+              <option value="">وب دیزاین</option>
+              <option value="">سئو</option>
+              <option value="">هوش مصنوعی</option>
+              <option value="">دیزاین پترن</option>
+              <option value="">فرانت اند</option>
+              <option value="">خرید و فروش</option>
+              <option value="">تجارت بین المللی</option>
+              <option value="">خرید فروش ارز</option>
+            </select>
+          </div>
+
+          <div class="flex flex-col">
+            <label for="" class="inline-block py-2">پیوست:</label>
+            <input
+              type="file"
+              class="px-2 py-1.5 rounded-lg text-red-600 outline-none"
+            />
+          </div>
+        </form>
       </div>
-      <!-- finished-->
-      <div>
-        <div class="flex justify-between items-center">
-          <span>
-            <span class="text-white text-lg">انجام شده</span>
-            <span
-              class="p-0.5 px-3 rounded-lg inline-block text-green-400 font-bold border-2 border-green-400"
-            >
-              1
-            </span>
-          </span>
+      <!-- for newTask window -->
 
-          <i class="fa-solid fa-angle-right ml-3"></i>
-        </div>
-        <!-- boxes -->
-        <div class="flex flex-col">
-          <!-- box -->
-          <div class="bg-black p-2 rounded-xl mt-4">
-            <div class="flex justify-between items-center">
-              <button class="text-2xl font-bold">...</button>
-              <div class="relative">
-                <img
-                  class="w-10 h-10 rounded-full object-cover z-50"
-                  src="./assets/img.jpg"
-                  alt=""
-                />
-                <img
-                  class="absolute w-10 h-10 rounded-full object-cover top-0 left-5"
-                  src="./assets/ppt-picture-GAM98 (15).jpg"
-                  alt=""
-                />
-              </div>
-            </div>
-
-            <p class="text-lg font-bold my-3">موضوع تسک</p>
-
-            <div
-              class="flex gap-2 [&>*]:p-2 [&>*]:rounded-md [&>*]:inline-block my-3"
-            >
-              <span class="bg-blue-500">درج محتوا</span>
-              <span class="bg-red-400 text-red-600 border border-red-700"
-                >#354545</span
+      <section
+        class="centerElements mt-9 grid grid-cols-2 gap-3 [&>*]:bg-gray-SecondaryColor [&>*]:rounded-md [&>*]:p-2 [&>*]:pt-3"
+      >
+        <!-- will  -->
+        <div>
+          <!-- top -->
+          <div class="flex justify-between items-center">
+            <span>
+              <span class="text-white text-lg">آینده</span>
+              <span
+                class="p-0.5 px-3 rounded-lg inline-block text-green-400 font-bold border-2 border-green-400"
               >
-              <span class="bg-green-300">content</span>
-              <div class="relative">
-                <i class="fa-regular fa-message text-2xl"></i>
-                <span
-                  class="absolute bg-purple-700 p-1 px-3 rounded-full text-white inline-block -top-3 -left-1"
-                  >3</span
-                >
-              </div>
-            </div>
-
-            <span
-              class="p-3 py-1 inline-block bg-blue-400 rounded-xl my-4 mt-1"
-            >
-              <span class="text-center"
-                >در حال انجام
-                <span> <i class="fa-solid fa-circle-left text-lg"></i> </span
-              ></span>
+                1
+              </span>
             </span>
 
-            <div
-              class="flex gap-1 [&>*]:p-2 [&>*]:rounded-md [&>*]:bg-gray-SecondaryColor"
-            >
-              <span>1403/01/31</span>
-              <span>1403/2/25</span>
-            </div>
+            <i class="fa-solid fa-angle-right ml-3"></i>
           </div>
-          <!-- box -->
-        </div>
-        <!-- boxes -->
-      </div>
-      <!-- not finished -->
-      <div>
-        <div class="flex justify-between items-center">
-          <span>
-            <span class="text-white text-lg">انجام نشده</span>
-            <span
-              class="p-0.5 px-3 rounded-lg inline-block text-green-400 font-bold border-2 border-green-400"
-            >
-              1
-            </span>
-          </span>
-
-          <i class="fa-solid fa-angle-right ml-3"></i>
-        </div>
-        <!-- boxes -->
-        <div class="flex flex-col">
-          <!-- box -->
-          <div class="bg-black p-2 rounded-xl mt-4">
-            <div class="flex justify-between items-center">
-              <button class="text-2xl font-bold">...</button>
-              <div class="relative">
-                <img
-                  class="w-10 h-10 rounded-full object-cover z-50"
-                  src="./assets/img.jpg"
-                  alt=""
-                />
-                <img
-                  class="absolute w-10 h-10 rounded-full object-cover top-0 left-5"
-                  src="./assets/ppt-picture-GAM98 (15).jpg"
-                  alt=""
-                />
+          <!-- boxes -->
+          <div class="boxes flex flex-col">
+            <!-- box -->
+            <div class="bg-black p-2 rounded-xl mt-4">
+              <div class="flex justify-between items-center">
+                <button class="text-2xl font-bold">...</button>
+                <div class="relative">
+                  <img
+                    class="w-10 h-10 rounded-full object-cover z-50"
+                    src="./assets/img.jpg"
+                    alt=""
+                  />
+                  <img
+                    class="absolute w-10 h-10 rounded-full object-cover top-0 left-5"
+                    src="./assets/ppt-picture-GAM98 (15).jpg"
+                    alt=""
+                  />
+                </div>
               </div>
-            </div>
 
-            <p class="text-lg font-bold my-3">موضوع تسک</p>
+              <p class="text-lg font-bold my-3">موضوع تسک</p>
 
-            <div
-              class="flex gap-2 [&>*]:p-2 [&>*]:rounded-md [&>*]:inline-block my-3"
-            >
-              <span class="bg-blue-500">درج محتوا</span>
-              <span class="bg-red-400 text-red-600 border border-red-700"
-                >#354545</span
+              <div
+                class="flex gap-2 [&>*]:p-2 [&>*]:rounded-md [&>*]:inline-block my-3"
               >
-              <span class="bg-green-300">content</span>
-              <div class="relative">
-                <i class="fa-regular fa-message text-2xl"></i>
-                <span
-                  class="absolute bg-purple-700 p-1 px-3 rounded-full text-white inline-block -top-3 -left-1"
-                  >3</span
+                <span class="bg-blue-500">درج محتوا</span>
+                <span class="bg-red-400 text-red-600 border border-red-700"
+                  >#354545</span
                 >
+                <span class="bg-green-300">content</span>
+                <div class="relative">
+                  <i class="fa-regular fa-message text-2xl"></i>
+                  <span
+                    class="absolute bg-purple-700 p-1 px-3 rounded-full text-white inline-block -top-3 -left-1"
+                    >3</span
+                  >
+                </div>
               </div>
-            </div>
 
-            <span
-              class="p-3 py-1 inline-block bg-blue-400 rounded-xl my-4 mt-1"
-            >
-              <span class="text-center"
-                >در حال انجام
-                <span> <i class="fa-solid fa-circle-left text-lg"></i> </span
-              ></span>
-            </span>
-
-            <div
-              class="flex gap-1 [&>*]:p-2 [&>*]:rounded-md [&>*]:bg-gray-SecondaryColor"
-            >
-              <span>1403/01/31</span>
-              <span>1403/2/25</span>
-            </div>
-          </div>
-          <!-- box -->
-
-          <!-- box -->
-          <div class="bg-black p-2 rounded-xl mt-4">
-            <div class="flex justify-between items-center">
-              <button class="text-2xl font-bold">...</button>
-              <div class="relative">
-                <img
-                  class="w-10 h-10 rounded-full object-cover z-50"
-                  src="./assets/img.jpg"
-                  alt=""
-                />
-                <img
-                  class="absolute w-10 h-10 rounded-full object-cover top-0 left-5"
-                  src="./assets/ppt-picture-GAM98 (15).jpg"
-                  alt=""
-                />
-              </div>
-            </div>
-
-            <p class="text-lg font-bold my-3">موضوع تسک</p>
-
-            <div
-              class="flex gap-2 [&>*]:p-2 [&>*]:rounded-md [&>*]:inline-block my-3"
-            >
-              <span class="bg-blue-500">درج محتوا</span>
-              <span class="bg-red-400 text-red-600 border border-red-700"
-                >#354545</span
+              <span
+                class="p-3 py-1 inline-block bg-blue-400 rounded-xl my-4 mt-1"
               >
-              <span class="bg-green-300">content</span>
-              <div class="relative">
-                <i class="fa-regular fa-message text-2xl"></i>
-                <span
-                  class="absolute bg-purple-700 p-1 px-3 rounded-full text-white inline-block -top-3 -left-1"
-                  >3</span
-                >
+                <span class="text-center"
+                  >در حال انجام
+                  <span> <i class="fa-solid fa-circle-left text-lg"></i> </span
+                ></span>
+              </span>
+
+              <div
+                class="flex gap-1 [&>*]:p-2 [&>*]:rounded-md [&>*]:bg-gray-SecondaryColor"
+              >
+                <span>1403/01/31</span>
+                <span>1403/2/25</span>
               </div>
             </div>
+            <!-- box -->
 
-            <span
-              class="p-3 py-1 inline-block bg-blue-400 rounded-xl my-4 mt-1"
-            >
-              <span class="text-center"
-                >در حال انجام
-                <span> <i class="fa-solid fa-circle-left text-lg"></i> </span
-              ></span>
+            <!-- box -->
+            <div class="bg-black p-2 rounded-xl mt-4">
+              <div class="flex justify-between items-center">
+                <button class="text-2xl font-bold">...</button>
+                <div class="relative">
+                  <img
+                    class="w-10 h-10 rounded-full object-cover z-50"
+                    src="./assets/img.jpg"
+                    alt=""
+                  />
+                  <img
+                    class="absolute w-10 h-10 rounded-full object-cover top-0 left-5"
+                    src="./assets/ppt-picture-GAM98 (15).jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <p class="text-lg font-bold my-3">موضوع تسک</p>
+
+              <div
+                class="flex gap-2 [&>*]:p-2 [&>*]:rounded-md [&>*]:inline-block my-3"
+              >
+                <span class="bg-blue-500">درج محتوا</span>
+                <span class="bg-red-400 text-red-600 border border-red-700"
+                  >#354545</span
+                >
+                <span class="bg-green-300">content</span>
+                <div class="relative">
+                  <i class="fa-regular fa-message text-2xl"></i>
+                  <span
+                    class="absolute bg-purple-700 p-1 px-3 rounded-full text-white inline-block -top-3 -left-1"
+                    >3</span
+                  >
+                </div>
+              </div>
+
+              <span
+                class="p-3 py-1 inline-block bg-blue-400 rounded-xl my-4 mt-1"
+              >
+                <span class="text-center"
+                  >در حال انجام
+                  <span> <i class="fa-solid fa-circle-left text-lg"></i> </span
+                ></span>
+              </span>
+
+              <div
+                class="flex gap-1 [&>*]:p-2 [&>*]:rounded-md [&>*]:bg-gray-SecondaryColor"
+              >
+                <span>1403/01/31</span>
+                <span>1403/2/25</span>
+              </div>
+            </div>
+            <!-- box -->
+          </div>
+          <!-- boxes -->
+        </div>
+        <!-- continue -->
+
+        <div>
+          <div class="flex justify-between items-center">
+            <span>
+              <span class="text-white text-lg">در حال انجام</span>
+              <span
+                class="p-0.5 px-3 rounded-lg inline-block text-green-400 font-bold border-2 border-green-400"
+              >
+                1
+              </span>
             </span>
 
-            <div
-              class="flex gap-1 [&>*]:p-2 [&>*]:rounded-md [&>*]:bg-gray-SecondaryColor"
-            >
-              <span>1403/01/31</span>
-              <span>1403/2/25</span>
-            </div>
+            <i class="fa-solid fa-angle-right ml-3"></i>
           </div>
-          <!-- box -->
+          <!-- boxes -->
+          <div class="flex flex-col">
+            <!-- box -->
+            <div class="bg-black p-2 rounded-xl mt-4">
+              <div class="flex justify-between items-center">
+                <button class="text-2xl font-bold">...</button>
+                <div class="relative">
+                  <img
+                    class="w-10 h-10 rounded-full object-cover z-50"
+                    src="./assets/img.jpg"
+                    alt=""
+                  />
+                  <img
+                    class="absolute w-10 h-10 rounded-full object-cover top-0 left-5"
+                    src="./assets/ppt-picture-GAM98 (15).jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <p class="text-lg font-bold my-3">موضوع تسک</p>
+
+              <div
+                class="flex gap-2 [&>*]:p-2 [&>*]:rounded-md [&>*]:inline-block my-3"
+              >
+                <span class="bg-blue-500">درج محتوا</span>
+                <span class="bg-red-400 text-red-600 border border-red-700"
+                  >#354545</span
+                >
+                <span class="bg-green-300">content</span>
+                <div class="relative">
+                  <i class="fa-regular fa-message text-2xl"></i>
+                  <span
+                    class="absolute bg-purple-700 p-1 px-3 rounded-full text-white inline-block -top-3 -left-1"
+                    >3</span
+                  >
+                </div>
+              </div>
+
+              <span
+                class="p-3 py-1 inline-block bg-blue-400 rounded-xl my-4 mt-1"
+              >
+                <span class="text-center"
+                  >در حال انجام
+                  <span> <i class="fa-solid fa-circle-left text-lg"></i> </span
+                ></span>
+              </span>
+
+              <div
+                class="flex gap-1 [&>*]:p-2 [&>*]:rounded-md [&>*]:bg-gray-SecondaryColor"
+              >
+                <span>1403/01/31</span>
+                <span>1403/2/25</span>
+              </div>
+            </div>
+            <!-- box -->
+          </div>
+          <!-- boxes -->
         </div>
-        <!-- boxes -->
-      </div>
-    </section>
+        <!-- finished-->
+        <div>
+          <div class="flex justify-between items-center">
+            <span>
+              <span class="text-white text-lg">انجام شده</span>
+              <span
+                class="p-0.5 px-3 rounded-lg inline-block text-green-400 font-bold border-2 border-green-400"
+              >
+                1
+              </span>
+            </span>
+
+            <i class="fa-solid fa-angle-right ml-3"></i>
+          </div>
+          <!-- boxes -->
+          <div class="flex flex-col">
+            <!-- box -->
+            <div class="bg-black p-2 rounded-xl mt-4">
+              <div class="flex justify-between items-center">
+                <button class="text-2xl font-bold">...</button>
+                <div class="relative">
+                  <img
+                    class="w-10 h-10 rounded-full object-cover z-50"
+                    src="./assets/img.jpg"
+                    alt=""
+                  />
+                  <img
+                    class="absolute w-10 h-10 rounded-full object-cover top-0 left-5"
+                    src="./assets/ppt-picture-GAM98 (15).jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <p class="text-lg font-bold my-3">موضوع تسک</p>
+
+              <div
+                class="flex gap-2 [&>*]:p-2 [&>*]:rounded-md [&>*]:inline-block my-3"
+              >
+                <span class="bg-blue-500">درج محتوا</span>
+                <span class="bg-red-400 text-red-600 border border-red-700"
+                  >#354545</span
+                >
+                <span class="bg-green-300">content</span>
+                <div class="relative">
+                  <i class="fa-regular fa-message text-2xl"></i>
+                  <span
+                    class="absolute bg-purple-700 p-1 px-3 rounded-full text-white inline-block -top-3 -left-1"
+                    >3</span
+                  >
+                </div>
+              </div>
+
+              <span
+                class="p-3 py-1 inline-block bg-blue-400 rounded-xl my-4 mt-1"
+              >
+                <span class="text-center"
+                  >در حال انجام
+                  <span> <i class="fa-solid fa-circle-left text-lg"></i> </span
+                ></span>
+              </span>
+
+              <div
+                class="flex gap-1 [&>*]:p-2 [&>*]:rounded-md [&>*]:bg-gray-SecondaryColor"
+              >
+                <span>1403/01/31</span>
+                <span>1403/2/25</span>
+              </div>
+            </div>
+            <!-- box -->
+          </div>
+          <!-- boxes -->
+        </div>
+        <!-- not finished -->
+        <div>
+          <div class="flex justify-between items-center">
+            <span>
+              <span class="text-white text-lg">انجام نشده</span>
+              <span
+                class="p-0.5 px-3 rounded-lg inline-block text-green-400 font-bold border-2 border-green-400"
+              >
+                1
+              </span>
+            </span>
+
+            <i class="fa-solid fa-angle-right ml-3"></i>
+          </div>
+          <!-- boxes -->
+          <div class="flex flex-col">
+            <!-- box -->
+            <div class="bg-black p-2 rounded-xl mt-4">
+              <div class="flex justify-between items-center">
+                <button class="text-2xl font-bold">...</button>
+                <div class="relative">
+                  <img
+                    class="w-10 h-10 rounded-full object-cover z-50"
+                    src="./assets/img.jpg"
+                    alt=""
+                  />
+                  <img
+                    class="absolute w-10 h-10 rounded-full object-cover top-0 left-5"
+                    src="./assets/ppt-picture-GAM98 (15).jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <p class="text-lg font-bold my-3">موضوع تسک</p>
+
+              <div
+                class="flex gap-2 [&>*]:p-2 [&>*]:rounded-md [&>*]:inline-block my-3"
+              >
+                <span class="bg-blue-500">درج محتوا</span>
+                <span class="bg-red-400 text-red-600 border border-red-700"
+                  >#354545</span
+                >
+                <span class="bg-green-300">content</span>
+                <div class="relative">
+                  <i class="fa-regular fa-message text-2xl"></i>
+                  <span
+                    class="absolute bg-purple-700 p-1 px-3 rounded-full text-white inline-block -top-3 -left-1"
+                    >3</span
+                  >
+                </div>
+              </div>
+
+              <span
+                class="p-3 py-1 inline-block bg-blue-400 rounded-xl my-4 mt-1"
+              >
+                <span class="text-center"
+                  >در حال انجام
+                  <span> <i class="fa-solid fa-circle-left text-lg"></i> </span
+                ></span>
+              </span>
+
+              <div
+                class="flex gap-1 [&>*]:p-2 [&>*]:rounded-md [&>*]:bg-gray-SecondaryColor"
+              >
+                <span>1403/01/31</span>
+                <span>1403/2/25</span>
+              </div>
+            </div>
+            <!-- box -->
+
+            <!-- box -->
+            <div class="bg-black p-2 rounded-xl mt-4">
+              <div class="flex justify-between items-center">
+                <button class="text-2xl font-bold">...</button>
+                <div class="relative">
+                  <img
+                    class="w-10 h-10 rounded-full object-cover z-50"
+                    src="./assets/img.jpg"
+                    alt=""
+                  />
+                  <img
+                    class="absolute w-10 h-10 rounded-full object-cover top-0 left-5"
+                    src="./assets/ppt-picture-GAM98 (15).jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <p class="text-lg font-bold my-3">موضوع تسک</p>
+
+              <div
+                class="flex gap-2 [&>*]:p-2 [&>*]:rounded-md [&>*]:inline-block my-3"
+              >
+                <span class="bg-blue-500">درج محتوا</span>
+                <span class="bg-red-400 text-red-600 border border-red-700"
+                  >#354545</span
+                >
+                <span class="bg-green-300">content</span>
+                <div class="relative">
+                  <i class="fa-regular fa-message text-2xl"></i>
+                  <span
+                    class="absolute bg-purple-700 p-1 px-3 rounded-full text-white inline-block -top-3 -left-1"
+                    >3</span
+                  >
+                </div>
+              </div>
+
+              <span
+                class="p-3 py-1 inline-block bg-blue-400 rounded-xl my-4 mt-1"
+              >
+                <span class="text-center"
+                  >در حال انجام
+                  <span> <i class="fa-solid fa-circle-left text-lg"></i> </span
+                ></span>
+              </span>
+
+              <div
+                class="flex gap-1 [&>*]:p-2 [&>*]:rounded-md [&>*]:bg-gray-SecondaryColor"
+              >
+                <span>1403/01/31</span>
+                <span>1403/2/25</span>
+              </div>
+            </div>
+            <!-- box -->
+          </div>
+          <!-- boxes -->
+        </div>
+      </section>
+    </div>
   </body>
 </html>
