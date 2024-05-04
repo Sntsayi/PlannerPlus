@@ -261,6 +261,34 @@ const changePageContent = async (href) => {
     centerContent.innerHTML = doc.body.outerHTML;
     // for taskPageLogic
     if (doc.title == "task") {
+      $("#elementId ,#elementId1 ").persianDatepicker({
+        theme: "dark",
+        cellWidth: 30, // by px
+        cellHeight: 30, // by px
+        alwaysShow: !1,
+        //   fontSize: 13, // by px
+        // onShow: function () {},
+        // onHide: function () {},
+        // onSelect: function () {},
+        // onRender: function () {},
+      });
+
+      //for multi select tag
+      new MultiSelectTag("countries", {
+        rounded: true, // default true
+        shadow: true, // default false
+        placeholder: "Search", // default Search...
+        tagColor: {
+          textColor: "#327b2c",
+          borderColor: "#92e681",
+          bgColor: "#111",
+        },
+        onChange: function (values) {
+          console.log(values);
+        },
+      });
+      //for multi select tag
+
       // for clickedAddNewTaksBtn
       const addNewTask = centerContent.querySelector(".addNewTask");
       const newTaskWindow = centerContent.querySelector(".newTaskWindow");
@@ -272,7 +300,7 @@ const changePageContent = async (href) => {
       console.log(addNewTask);
       addNewTask.addEventListener("click", () => {
         newTaskWindow.classList.remove("translate-x-400%");
-        htmlTag.classList.add("overflow-y-hidden");
+        // htmlTag.classList.add("overflow-y-hidden");
         headerTag.classList.add("blur-sm");
         rightSideBarBtn.classList.add("blur-md");
         centerElements.classList.add("blur-md");
@@ -281,11 +309,49 @@ const changePageContent = async (href) => {
       // for closeTheAddNewTaskWindow
       closeNewTaskWindow.addEventListener("click", () => {
         newTaskWindow.classList.add("translate-x-400%");
-        htmlTag.classList.remove("overflow-y-hidden");
+        // htmlTag.classList.remove("overflow-y-hidden");
         headerTag.classList.remove("blur-sm");
         rightSideBarBtn.classList.remove("blur-md");
         centerElements.classList.remove("blur-md");
         leftSideBarBtn.classList.remove("blur-md");
+      });
+
+      // for confirmNewTaskBtn
+      document.querySelector("#submitForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        Swal.fire({
+          icon: "success",
+          text: "با موفیت افزوده شد.",
+          title: "موفق",
+          showClass: {
+            popup: `
+            animate__animated
+            animate__fadeInUp
+            animate__faster
+          `,
+          },
+          hideClass: {
+            popup: `
+            animate__animated
+            animate__fadeOutDown
+            animate__faster
+          `,
+          },
+          timer: 4000,
+        });
+        setTimeout(() => {
+          newTaskWindow.classList.add("translate-x-400%");
+          htmlTag.classList.remove("overflow-y-hidden");
+          headerTag.classList.remove("blur-sm");
+          rightSideBarBtn.classList.remove("blur-md");
+          centerElements.classList.remove("blur-md");
+          leftSideBarBtn.classList.remove("blur-md");
+        }, 5000);
+
+        // reset the all input tags
+        e.target.reset();
+        // document.querySelector("#countries").selectedIndex = -1;
       });
     }
     // for taskPageLogic
@@ -331,5 +397,3 @@ window.addEventListener("DOMContentLoaded", () => {
 //   .catch((error) => {
 //     console.error("Error fetching or parsing HTML:", error);
 //   });
-
-// for taskPage
