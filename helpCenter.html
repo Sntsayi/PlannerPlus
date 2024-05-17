@@ -3,7 +3,327 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Help And Center Section</title>
   </head>
-  <body></body>
+  <body>
+    <!-- top -->
+    <section class="">
+      <p class="text-lg font-bold">وضعیت تیکت ها</p>
+      <div class="mt-6 grid grid-cols-4 gap-3">
+        <button
+          class="bg-gray-SecondaryColor p-8 flex flex-col gap-1 rounded-xl hover:bg-gray-400 transition-all duration-500 hover:scale-y-110"
+        >
+          <i class="fa-solid fa-ticket text-3xl"></i>
+          <span class="text-lg font-bold">همه</span>
+          <span>0</span>
+        </button>
+
+        <button
+          class="bg-gray-SecondaryColor p-8 flex flex-col gap-1 rounded-xl border-6 border-green-500 hover:bg-green-500 hover:scale-y-110 transition-all duration-500"
+        >
+          <i class="fa-solid fa-ticket text-3xl"></i>
+          <span class="text-lg font-bold">پاسخ داده شده</span>
+          <span>0</span>
+        </button>
+
+        <button
+          class="bg-gray-SecondaryColor p-8 flex flex-col gap-1 rounded-xl border-6 border-orange-500 hover:bg-orange-500 transition-all duration-500 hover:scale-y-110"
+        >
+          <i class="fa-solid fa-ticket text-3xl"></i>
+          <span class="text-lg font-bold">در حال بررسی</span>
+          <span>0</span>
+        </button>
+
+        <button
+          class="bg-gray-SecondaryColor p-8 flex flex-col gap-1 rounded-xl border-6 border-red-500 hover:bg-red-500 transition-all duration-500 hover:scale-y-110"
+        >
+          <i class="fa-solid fa-ticket text-3xl"></i>
+          <span class="text-lg font-bold">جدید</span>
+          <span>0</span>
+        </button>
+      </div>
+    </section>
+    <!-- top -->
+
+    <!-- bottom -->
+    <section class="mt-20">
+      <div class="flex justify-between items-center">
+        <span class="text-lg font-bold">لیست تیکت ها</span>
+        <button
+          id="newTicket"
+          href="#newTicket"
+          class="bg-orange-Secondary rounded-lg p-4 font-bold cursor-pointer"
+        >
+          تیکت جدید
+        </button>
+      </div>
+
+      <div class="mx-32 text-center mt-5">
+        <input
+          type="search"
+          class="rounded-lg w-full outline-none p-2 px-4 text-black text-left placeholder:text-right"
+          placeholder="شماره تیکت را جستجو کنید......"
+        />
+      </div>
+
+      <!-- for addNewTicket -->
+      <div
+        class="newTicketWindow translate-x-400% transition-all duration-700 ease-linear p-8 pt-12 absolute top-5 w-3/5 h-4/5 z-50 rounded-lg bg-black"
+      >
+        <div class="text-lg font-bold flex justify-between">
+          <span>لطفا جزِئیات تیکت خود را پر کنید :</span>
+          <button>
+            <i class="closeNewTicketWindow fa-solid fa-xmark text-3xl"></i>
+          </button>
+        </div>
+        <form action="#" id="submitForm">
+          <div class="mt-5 grid grid-cols-2 gap-2">
+            <div class="flex flex-col">
+              <label for="" class="inline-block py-2"
+                >موضوع :
+                <sup class="text-xl font-extrabold text-red-500">*</sup></label
+              >
+              <input
+                type="text"
+                placeholder="موضوع تیکت را وارد نمایید."
+                required
+                id=""
+                class="px-2 py-1.5 rounded-lg text-red-600 outline-none"
+              />
+            </div>
+
+            <div class="flex flex-col">
+              <label for="" class="inline-block py-2"
+                >دپارتمان :
+                <sup class="text-xl font-extrabold text-red-500">*</sup></label
+              >
+              <select
+                value="2"
+                name="#"
+                required
+                id="#"
+                class="px-2 py-1.5 rounded-lg text-red-600 outline-none cursor-pointer"
+              >
+                <option value="2">پشتیبانی فنی</option>
+                <option value="1">پشتیبانی صنعتی</option>
+                <option value="3">فروشنده</option>
+                <option value="4">مدیر</option>
+              </select>
+            </div>
+
+            <div class="flex flex-col">
+              <label for="" class="inline-block py-2">
+                اولویت :
+                <sup class="text-xl font-extrabold text-red-500">*</sup></label
+              >
+
+              <select
+                required
+                name=""
+                id=""
+                class="px-2 py-1.5 rounded-lg text-red-600 outline-none"
+              >
+                <option value="">خیلی زیاد</option>
+                <option value="">زیاد</option>
+                <option value="">متوسط</option>
+                <option value="">کم</option>
+              </select>
+            </div>
+
+            <div class="flex flex-col">
+              <label for="" class="inline-block py-2"
+                >در رابطه با :
+                <sup class="text-xl font-extrabold text-red-500">*</sup></label
+              >
+              <select
+                value="2"
+                name="#"
+                required
+                id="#"
+                class="px-2 py-1.5 rounded-lg text-red-600 outline-none cursor-pointer"
+              >
+                <option value="2">بررسی مدارک</option>
+                <option value="1">مشکل اپلیکیشن</option>
+                <option value="3">دریاف رمز</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="mt-5">
+            <div class="flex flex-col">
+              <label for="" class="inline-block py-2"
+                >محتوا :
+                <sup class="text-xl font-extrabold text-red-500">*</sup>
+              </label>
+              <textarea
+                name=""
+                id=""
+                placeholder="متن پیام را وارد نمایید."
+                required
+                type="text"
+                class="px-2 py-1.5 rounded-lg text-red-600 outline-none resize-none placeholder:text-lg"
+                cols="8"
+                rows="8"
+              ></textarea>
+            </div>
+          </div>
+          <div class="text-center mt-10">
+            <input
+              value="افزودن"
+              type="submit"
+              class="px-5 py-4 bg-red-600 rounded-lg cursor-pointer text-white font-bold text-base hover:bg-slate-400 transition-all duration-300"
+            />
+          </div>
+        </form>
+      </div>
+      <!-- for addNewTicket -->
+
+      <!-- for show detail of ticket i have clicked -->
+      <div
+        class="ticketListWindow translate-x-400% transition-all duration-700 ease-linear p-8 pt-12 absolute top-5 w-3/5 h-4/5 z-50 rounded-lg bg-black"
+      >
+        <div class="text-xl font-bold flex justify-between">
+          <span>جزئیات تیکت خود را میتوانید مشاهده فرمایید :</span>
+          <button>
+            <i class="closeTicketListWindow fa-solid fa-xmark text-3xl"></i>
+          </button>
+        </div>
+        <form action="#">
+          <div>
+            <label for="" class="inline-block py-2 font-extrabold text-xl"
+              >موضوع :
+            </label>
+            <span class="font-bold">تست</span>
+
+            <span class="text-lg mx-2">/</span>
+            <span class="ml-8 font-bold text-sm">تیکت شماره: 2</span>
+          </div>
+
+          <div class="mt-5 grid grid-cols-1 gap-2">
+            <div class="flex flex-col">
+              <label for="" class="inline-block py-2 font-extrabold"
+                >دپارتمان :
+              </label>
+              <p
+                type="text"
+                class="px-2 py-1.5 rounded-lg text-gray-100 text-lg bg-gray-500 outline-none min-h-10"
+              >
+                sfdf
+              </p>
+            </div>
+
+            <div class="flex flex-col">
+              <label for="" class="inline-block py-2 font-extrabold">
+                اولویت :
+              </label>
+
+              <p
+                type="text"
+                class="px-2 py-1.5 rounded-lg text-gray-100 text-lg bg-gray-500 outline-none min-h-10"
+              >
+                sfdf
+              </p>
+            </div>
+
+            <div class="flex flex-col">
+              <label for="" class="inline-block py-2 font-extrabold"
+                >در رابطه با :
+              </label>
+              <p
+                type="text"
+                class="px-2 py-1.5 rounded-lg text-gray-100 text-lg bg-gray-500 outline-none min-h-10"
+              >
+                sfdf
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-5">
+            <div class="flex flex-col">
+              <label for="" class="inline-block py-2 font-extrabold"
+                >محتوا :
+              </label>
+              <p
+                type="text"
+                class="px-2 py-1.5 rounded-lg text-gray-100 text-lg bg-gray-500 outline-none min-h-48"
+              >
+                sfdf
+              </p>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- for show detail of ticket i have clicked -->
+
+      <!-- ticketList -->
+      <div class="centerElements mt-4 space-y-3 [&>*]:w-full">
+        <!-- ticket -->
+        <button
+          class="ticket grid grid-cols-3 gap-2 items-center hover:bg-gray-700 transition-all duration-500 bg-gray-500 rounded-lg p-2 px-3 text-base font-semibold"
+        >
+          <div class="flex gap-2 items-center">
+            <img
+              src="./assets/banner1.jpg"
+              class="w-10 h-10 rounded-full"
+              alt="Not-Found"
+            />
+            <span>طه صحرایی</span>
+            <div class="flex flex-col text-sm">
+              <span>3 اردیبهشت</span>
+              <span class="text-right">10:00:00</span>
+            </div>
+            <span class="text-gray-300 text-xs font-bold">شماره : 2</span>
+          </div>
+          <span class="text-center">بررسی مدارک</span>
+          <span class="text-left text-gray-300">10ثانیه قبل</span>
+        </button>
+        <!-- ticket -->
+        <!-- ticket -->
+        <button
+          class="ticket grid grid-cols-3 gap-2 items-center hover:bg-gray-700 transition-all duration-500 bg-gray-500 rounded-lg p-2 px-3 text-base font-semibold"
+        >
+          <div class="flex gap-2 items-center">
+            <img
+              src="./assets/banner1.jpg"
+              class="w-10 h-10 rounded-full"
+              alt="Not-Found"
+            />
+            <span>طه صحرایی</span>
+            <div class="flex flex-col text-sm">
+              <span>3 اردیبهشت</span>
+              <span class="text-right">10:00:00</span>
+            </div>
+            <span class="text-gray-300 text-xs font-bold">شماره : 2</span>
+          </div>
+          <span class="text-center">بررسی مدارک</span>
+          <span class="text-left text-gray-300">10ثانیه قبل</span>
+        </button>
+        <!-- ticket -->
+
+        <!-- ticket -->
+        <button
+          class="ticket grid grid-cols-3 gap-2 items-center hover:bg-gray-700 transition-all duration-500 bg-gray-500 rounded-lg p-2 px-3 text-base font-semibold"
+        >
+          <div class="flex gap-2 items-center">
+            <img
+              src="./assets/banner1.jpg"
+              class="w-10 h-10 rounded-full"
+              alt="Not-Found"
+            />
+            <span>طه صحرایی</span>
+            <div class="flex flex-col text-sm">
+              <span>3 اردیبهشت</span>
+              <span class="text-right">10:00:00</span>
+            </div>
+            <span class="text-gray-300 text-xs font-bold">شماره : 2</span>
+          </div>
+          <span class="text-center">بررسی مدارک</span>
+          <span class="text-left text-gray-300">10ثانیه قبل</span>
+        </button>
+        <!-- ticket -->
+      </div>
+      <!-- ticketList -->
+    </section>
+    <!-- bottom -->
+  </body>
 </html>

@@ -1,0 +1,209 @@
+@font-face {
+  font-family: "iranYekan";
+  src: url(../iranyekanwebmedium.2d4f96e5.woff) format("woff");
+  font-weight: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "iranYekan", sans-serif;
+  /* background-color: #f5f5f5; */
+  font-weight: normal;
+  /* text-align: center; */
+  /* color: #fff; */
+}
+
+.show-taghvim {
+  cursor: pointer;
+}
+
+.parent__taghvim {
+  width: 100%;
+  /* height: 50%; */
+  border-radius: 30px;
+  /* padding: 20px; */
+  background-color: #7a7b7c;
+  /* color: #fff; */
+}
+
+.parent__taghvim-show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.taghvim {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  width: 100%;
+  /* height: 50%; */
+  /* padding: 2rem; */
+  /* position: absolute; */
+  transition: all 0.5s;
+  /* bottom: 50%; */
+  /* transform: translateY(50%); */
+  background-color: #7a7b7c;
+  color: #fff;
+  border-radius: 1rem;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.taghvim__control {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  background-color: #7a7b7c;
+  color: #fff;
+  justify-content: space-between;
+  border-radius: 20px 20px 0 0;
+  padding-top: 10px;
+  align-items: center;
+}
+
+.taghvim__control button {
+  border: none;
+  margin: 0 10px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.taghvim__control button svg {
+  width: 25px;
+  height: 25px;
+  color: #fff;
+  stroke-width: 2px;
+}
+
+.parent__taghvim table {
+  margin: 10px auto;
+  border-collapse: collapse;
+  width: 100%;
+  min-height: 100px;
+  max-height: 500px;
+  /* border-radius: 0 0 20px 20px; */
+  overflow: hidden;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.parent__taghvim th,
+.parent__taghvim td {
+  font-size: 12px;
+  border: 1px solid #ddd;
+  color: #fff;
+  border: 0;
+  padding: 15px 5px;
+}
+
+.parent__taghvim th {
+  background-color: #7a7b7c;
+  color: #fff;
+  /* caret-color: #fff; */
+  font-weight: bold;
+  text-align: center;
+}
+
+/* .parent__taghvim td {
+  background-color: #7a7b7c;
+  cursor: pointer;
+}
+.parent__taghvim:hover {
+  color: aqua;
+} */
+
+.text-muted {
+  visibility: hidden;
+  border: 0;
+}
+
+.past-day {
+  /* color: #33333391; */
+  color: #fff;
+  position: relative;
+  /* opacity: 0.7; */
+}
+
+.dayGhaymat__parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ghaymat-taghvim {
+  font-size: 11px;
+  color: #000075;
+}
+.f-8px {
+  font-size: 8px !important;
+}
+
+.day {
+  font-size: 15px;
+  /* cursor: pointer; */
+  padding: 3px 10px;
+  border-radius: 4px;
+  transition: all;
+  transition-duration: 0.4s;
+
+  /* color: rgb(51, 51, 51); */
+}
+.day:hover {
+  background-color: #222325;
+}
+
+#current-month {
+  font-size: 15px;
+  /* width: 100%; */
+  color: #fff;
+}
+
+.close-taghvim {
+  background: #fff;
+  width: 30px;
+  border: 0;
+  height: 30px;
+  position: absolute;
+  bottom: 14px;
+  cursor: pointer;
+}
+
+.close-taghvim svg {
+  width: 100%;
+  height: 100%;
+  color: #333;
+  stroke-width: 2px;
+}
+
+.showDateprice {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.showDateprice .rooms__showDate-discount {
+  width: auto;
+}
+.today {
+  color: red;
+  font-weight: 900;
+}
+
+/* @media only screen and (min-width: 900px) {
+  parent__taghvim {
+    align-items: center !important;
+  }
+
+  .taghvim {
+    width: 100%;
+  }
+} */

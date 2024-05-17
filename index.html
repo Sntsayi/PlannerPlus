@@ -8,6 +8,10 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- style file for persian calender -->
+    <link rel="stylesheet" href="./css/calender/app.css" />
+    <!-- style file for persian calender -->
+
     <!-- style for persian datepicker -->
     <link rel="stylesheet" href="./css/persianDatepicker-dark.css" />
     <!-- style for multi selecet tag in tasks page -->
@@ -1112,7 +1116,7 @@
         </main>
         <!-- leftSidebar -->
         <aside
-          class="left-SideBar-Layout w-1/4 bg-black-Secondary text-white m-2 rounded-3xl p-4 sticky top-0 h-fit"
+          class="left-SideBar-Layout w-1/4 min-h-screen bg-black-Secondary text-white m-2 rounded-3xl p-4 sticky top-0 h-fit"
         >
           <!-- first section of leftSidebar -->
           <div class="flex flex-col gap-3 items-center">
@@ -1156,19 +1160,64 @@
 
           <!-- second section of leftSidebar -->
           <div>
-            <div class="container mx-auto p-2">
-              <h1 class="text-xl font-bold mb-4" id="currentYear"></h1>
-              <div class="flex justify-between items-center mb-4">
-                <button id="prevMonthBtn" class="btn btn-blue mr-2 text-3xl">
-                  &rarr;
-                </button>
-                <h2 id="monthName" class="text-xl font-bold"></h2>
-                <button id="nextMonthBtn" class="btn btn-blue ml-2 text-3xl">
-                  &larr;
-                </button>
+            <!-- logic of calender -->
+            <div class="parent__taghvim" data-id="1">
+              <div class="taghvim">
+                <div class="taghvim__control">
+                  <button onclick="nextMonth(this)">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                      />
+                    </svg>
+                  </button>
+
+                  <h2 id="current-month"></h2>
+
+                  <button onclick="previousMonth(this)">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15.75 19.5 8.25 12l7.5-7.5"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>شنبه</th>
+                      <th>یک‌شنبه</th>
+                      <th>دو‌شنبه</th>
+                      <th>سه‌شنبه</th>
+                      <th>چهار‌شنبه</th>
+                      <th>پنج‌شنبه</th>
+                      <th>جمعه</th>
+                    </tr>
+                  </thead>
+                  <tbody id="calendar-body"></tbody>
+                </table>
               </div>
-              <div id="calendarContainer" class="mb-4"></div>
             </div>
+
+            <!-- logic of calender -->
           </div>
 
           <div class="border border-gray-SecondaryColor w-full my-6"></div>
@@ -1178,7 +1227,7 @@
             <div class="flex justify-between">
               <div class="flex gap-2">
                 <span>کارهای امروز</span>
-                <span>1403/01/11</span>
+                <span id="today_date"></span>
               </div>
               <button class="text-xs font-bold text-orange-Secondary">
                 مشاهده همه
@@ -1278,6 +1327,13 @@
         </aside>
       </div>
     </div>
+
+    <!-- script for the calender in mainpage -->
+    <script src="./js/calender/moment.min.js"></script>
+    <script src="./js/calender/fa.min.js"></script>
+    <script src="./js/calender/jalali-moment.browser.js"></script>
+    <script src="./js/calender/app.js"></script>
+    <!-- script for the calender in mainpage -->
 
     <!-- script for sweetalert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
