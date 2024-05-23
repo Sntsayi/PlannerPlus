@@ -7,11 +7,11 @@
   </head>
   <body>
     <!-- top -->
-    <section class="">
+    <section id="statusOfTicket">
       <p class="text-lg font-bold">وضعیت تیکت ها</p>
       <div class="mt-6 grid grid-cols-4 gap-3">
         <button
-          class="bg-gray-SecondaryColor p-8 flex flex-col gap-1 rounded-xl hover:bg-gray-400 transition-all duration-500 hover:scale-y-110"
+          class="bg-black_Secondary3 p-8 flex flex-col gap-1 rounded-xl hover:bg-black_Secondary2 transition-all duration-500 hover:scale-y-110"
         >
           <i class="fa-solid fa-ticket text-3xl"></i>
           <span class="text-lg font-bold">همه</span>
@@ -19,7 +19,7 @@
         </button>
 
         <button
-          class="bg-gray-SecondaryColor p-8 flex flex-col gap-1 rounded-xl border-6 border-green-500 hover:bg-green-500 hover:scale-y-110 transition-all duration-500"
+          class="bg-black_Secondary3 p-8 flex flex-col gap-1 rounded-xl border-2 border-green-500 hover:bg-black_Secondary2 hover:scale-y-110 transition-all duration-500"
         >
           <i class="fa-solid fa-ticket text-3xl"></i>
           <span class="text-lg font-bold">پاسخ داده شده</span>
@@ -27,7 +27,7 @@
         </button>
 
         <button
-          class="bg-gray-SecondaryColor p-8 flex flex-col gap-1 rounded-xl border-6 border-orange-500 hover:bg-orange-500 transition-all duration-500 hover:scale-y-110"
+          class="bg-black_Secondary3 p-8 flex flex-col gap-1 rounded-xl border-2 border-orange-500 hover:bg-black_Secondary2 transition-all duration-500 hover:scale-y-110"
         >
           <i class="fa-solid fa-ticket text-3xl"></i>
           <span class="text-lg font-bold">در حال بررسی</span>
@@ -35,7 +35,7 @@
         </button>
 
         <button
-          class="bg-gray-SecondaryColor p-8 flex flex-col gap-1 rounded-xl border-6 border-red-500 hover:bg-red-500 transition-all duration-500 hover:scale-y-110"
+          class="bg-black_Secondary3 p-8 flex flex-col gap-1 rounded-xl border-2 border-red-500 hover:bg-black_Secondary2 transition-all duration-500 hover:scale-y-110"
         >
           <i class="fa-solid fa-ticket text-3xl"></i>
           <span class="text-lg font-bold">جدید</span>
@@ -47,31 +47,33 @@
 
     <!-- bottom -->
     <section class="mt-20">
-      <div class="flex justify-between items-center">
-        <span class="text-lg font-bold">لیست تیکت ها</span>
-        <button
-          id="newTicket"
-          href="#newTicket"
-          class="bg-orange-Secondary rounded-lg p-4 font-bold cursor-pointer"
-        >
-          تیکت جدید
-        </button>
-      </div>
+      <div id="searchBar">
+        <div class="flex justify-between items-center">
+          <span class="text-lg font-bold">لیست تیکت ها</span>
+          <button
+            id="newTicket"
+            href="#newTicket"
+            class="bg-orange-Secondary hover:bg-black_Secondary2 transition-all duration-200 rounded-lg p-4 font-bold cursor-pointer"
+          >
+            تیکت جدید
+          </button>
+        </div>
 
-      <div class="mx-32 text-center mt-5">
-        <input
-          type="search"
-          class="rounded-lg w-full outline-none p-2 px-4 text-black text-left placeholder:text-right"
-          placeholder="شماره تیکت را جستجو کنید......"
-        />
+        <div class="mx-32 text-center mt-5">
+          <input
+            type="search"
+            class="rounded-lg w-full outline-none p-2 px-4 text-black text-left placeholder:text-right"
+            placeholder="شماره تیکت را جستجو کنید......"
+          />
+        </div>
       </div>
 
       <!-- for addNewTicket -->
       <div
-        class="newTicketWindow translate-x-400% transition-all duration-700 ease-linear p-8 pt-12 absolute top-5 w-3/5 h-4/5 z-50 rounded-lg bg-black"
+        class="newTicketWindow bg-black_Secondary translate-x-400% addNewWindowMode min-h-93%"
       >
         <div class="text-lg font-bold flex justify-between">
-          <span>لطفا جزِئیات تیکت خود را پر کنید :</span>
+          <span>لطفا جزئیات تیکت خود را پر کنید :</span>
           <button>
             <i class="closeNewTicketWindow fa-solid fa-xmark text-3xl"></i>
           </button>
@@ -88,7 +90,7 @@
                 placeholder="موضوع تیکت را وارد نمایید."
                 required
                 id=""
-                class="px-2 py-1.5 rounded-lg text-red-600 outline-none"
+                class="px-2 py-1.5 rounded-lg accent-black text-black outline-none"
               />
             </div>
 
@@ -102,7 +104,7 @@
                 name="#"
                 required
                 id="#"
-                class="px-2 py-1.5 rounded-lg text-red-600 outline-none cursor-pointer"
+                class="px-2 py-1.5 rounded-lg accent-black text-black outline-none cursor-pointer"
               >
                 <option value="2">پشتیبانی فنی</option>
                 <option value="1">پشتیبانی صنعتی</option>
@@ -121,7 +123,7 @@
                 required
                 name=""
                 id=""
-                class="px-2 py-1.5 rounded-lg text-red-600 outline-none"
+                class="px-2 py-1.5 rounded-lg accent-black text-black outline-none"
               >
                 <option value="">خیلی زیاد</option>
                 <option value="">زیاد</option>
@@ -140,7 +142,7 @@
                 name="#"
                 required
                 id="#"
-                class="px-2 py-1.5 rounded-lg text-red-600 outline-none cursor-pointer"
+                class="px-2 py-1.5 rounded-lg accent-black text-black outline-none cursor-pointer"
               >
                 <option value="2">بررسی مدارک</option>
                 <option value="1">مشکل اپلیکیشن</option>
@@ -161,7 +163,7 @@
                 placeholder="متن پیام را وارد نمایید."
                 required
                 type="text"
-                class="px-2 py-1.5 rounded-lg text-red-600 outline-none resize-none placeholder:text-lg"
+                class="px-2 py-1.5 rounded-lg accent-black text-black outline-none resize-none placeholder:text-lg"
                 cols="8"
                 rows="8"
               ></textarea>
@@ -171,7 +173,7 @@
             <input
               value="افزودن"
               type="submit"
-              class="px-5 py-4 bg-red-600 rounded-lg cursor-pointer text-white font-bold text-base hover:bg-slate-400 transition-all duration-300"
+              class="px-5 py-4 bg-orange-Secondary rounded-lg cursor-pointer text-white font-bold text-base hover:bg-slate-400 transition-all duration-300"
             />
           </div>
         </form>
@@ -180,7 +182,7 @@
 
       <!-- for show detail of ticket i have clicked -->
       <div
-        class="ticketListWindow translate-x-400% transition-all duration-700 ease-linear p-8 pt-12 absolute top-5 w-3/5 h-4/5 z-50 rounded-lg bg-black"
+        class="ticketListWindow bg-black_Secondary translate-x-400% addNewWindowMode min-h-93%"
       >
         <div class="text-xl font-bold flex justify-between">
           <span>جزئیات تیکت خود را میتوانید مشاهده فرمایید :</span>
@@ -259,7 +261,7 @@
       <div class="centerElements mt-4 space-y-3 [&>*]:w-full">
         <!-- ticket -->
         <button
-          class="ticket grid grid-cols-3 gap-2 items-center hover:bg-gray-700 transition-all duration-500 bg-gray-500 rounded-lg p-2 px-3 text-base font-semibold"
+          class="ticket grid grid-cols-3 gap-2 items-center hover:bg-black_Secondary transition-all duration-500 bg-black_Secondary3 rounded-lg p-2 px-3 text-base font-semibold"
         >
           <div class="flex gap-2 items-center">
             <img
@@ -280,7 +282,7 @@
         <!-- ticket -->
         <!-- ticket -->
         <button
-          class="ticket grid grid-cols-3 gap-2 items-center hover:bg-gray-700 transition-all duration-500 bg-gray-500 rounded-lg p-2 px-3 text-base font-semibold"
+          class="ticket grid grid-cols-3 gap-2 items-center hover:bg-black_Secondary transition-all duration-500 bg-black_Secondary3 rounded-lg p-2 px-3 text-base font-semibold"
         >
           <div class="flex gap-2 items-center">
             <img
@@ -302,7 +304,7 @@
 
         <!-- ticket -->
         <button
-          class="ticket grid grid-cols-3 gap-2 items-center hover:bg-gray-700 transition-all duration-500 bg-gray-500 rounded-lg p-2 px-3 text-base font-semibold"
+          class="ticket grid grid-cols-3 gap-2 items-center hover:bg-black_Secondary transition-all duration-500 bg-black_Secondary3 rounded-lg p-2 px-3 text-base font-semibold"
         >
           <div class="flex gap-2 items-center">
             <img

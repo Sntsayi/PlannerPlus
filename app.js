@@ -130,6 +130,10 @@ const changePageContent = async (href) => {
   const parser = new DOMParser();
   const doc = parser.parseFromString(html, "text/html");
 
+  // for change and add left and centre side
+  const centerMainTag = document.querySelector("#center_content");
+  const leftSideBarLayout = document.querySelector(".left-SideBar-Layout");
+
   // check if new content is home page or another pages
   const existHeader = doc.body.querySelector("#right-SideBar-Layout");
 
@@ -138,7 +142,14 @@ const changePageContent = async (href) => {
   if (existHeader) {
     const homeMainContent = doc.body.querySelector("#center-Content-Container");
     centerContent.innerHTML = homeMainContent.outerHTML;
+    centerMainTag.classList.add("w-2/3");
+    centerMainTag.classList.remove("w-4/5");
+    leftSideBarLayout.classList.remove("hidden");
   } else {
+    centerMainTag.classList.remove("w-2/3");
+    centerMainTag.classList.add("w-4/5");
+    leftSideBarLayout.classList.add("hidden");
+
     centerContent.innerHTML = doc.body.outerHTML;
 
     function setSweetAlert() {
@@ -247,6 +258,8 @@ const changePageContent = async (href) => {
       // for clickedAddNewTaksBtn
       const newTicketBtn = centerContent.querySelector("#newTicket");
       const centerElements = centerContent.querySelector(".centerElements");
+      const searchBar = centerContent.querySelector("#searchBar");
+      const statusOfTicket = centerContent.querySelector("#statusOfTicket");
       const newTicketWindow = centerContent.querySelector(".newTicketWindow");
       const closeNewTicketWindow = centerContent.querySelector(
         ".closeNewTicketWindow"
@@ -261,6 +274,8 @@ const changePageContent = async (href) => {
         headerTag.classList.add("blur-sm");
         rightSideBarBtn.classList.add("blur-md");
         centerElements.classList.add("blur-md");
+        searchBar.classList.add("blur-md");
+        statusOfTicket.classList.add("blur-md");
         leftSideBarBtn.classList.add("blur-md");
       });
       // for closeTheAddNewTaskWindow
@@ -270,6 +285,8 @@ const changePageContent = async (href) => {
         headerTag.classList.remove("blur-sm");
         rightSideBarBtn.classList.remove("blur-md");
         centerElements.classList.remove("blur-md");
+        searchBar.classList.remove("blur-md");
+        statusOfTicket.classList.remove("blur-md");
         leftSideBarBtn.classList.remove("blur-md");
       });
 
@@ -306,6 +323,8 @@ const changePageContent = async (href) => {
           headerTag.classList.add("blur-sm");
           rightSideBarBtn.classList.add("blur-md");
           centerElements.classList.add("blur-md");
+          searchBar.classList.add("blur-md");
+          statusOfTicket.classList.add("blur-md");
           leftSideBarBtn.classList.add("blur-md");
         });
       });
@@ -317,6 +336,8 @@ const changePageContent = async (href) => {
         headerTag.classList.remove("blur-sm");
         rightSideBarBtn.classList.remove("blur-md");
         centerElements.classList.remove("blur-md");
+        searchBar.classList.remove("blur-md");
+        statusOfTicket.classList.remove("blur-md");
         leftSideBarBtn.classList.remove("blur-md");
       });
 
@@ -350,3 +371,8 @@ window.addEventListener("DOMContentLoaded", () => {
   changePageContent(initiaState);
 });
 //  for logic of Single webPage
+
+// // for login page
+// window.onload = function () {
+//   document.querySelector(".inputOfLogin").value = " ";
+// };

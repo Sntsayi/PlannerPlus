@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="transition-all duration-300">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Login|Planner Plus</title>
+  </head>
+  <body
+    class="bg-black_Secondary min-h-screen flex justify-center items-center transition-all duration-300"
+  >
+    <section>
+      <p class="text-white text-center text-2xl font-bold">Planner_plus</p>
+      <div class="bg-white mt-4 rounded-lg min-h-90 p-6">
+        <p class="text-xl font-bold">ورود به حساب کاربری</p>
+        <p class="mt-2 text-sm">
+          پس از ورود به حساب خود میتوانید از تمام ویژگی های حساب استفاده کنید.
+        </p>
+        <form action="" class="flex flex-col gap-2 mt-6">
+          <input
+            class="inputOfLogin mx-8 rounded-md placeholder:text-gray-500 bg-gray-200 p-2 text-left focus:bg-gray-200 hover:border hover:border-blue-500 transition-all duration-300 outline-none placeholder:text-right"
+            type="email"
+            required
+            placeholder="ایمیل خود را وارد نمایید."
+          />
+          <input
+            class="inputOfLogin mx-8 rounded-md placeholder:text-gray-500 bg-gray-200 p-2 text-left focus:bg-gray-200 hover:border hover:border-blue-500 transition-all duration-300 outline-none placeholder:text-right"
+            type="password"
+            placeholder="رمز عبور خود را وارد نمایید."
+          />
+          <div class="flex justify-between items-center mt-4 mx-8">
+            <input
+              type="submit"
+              value="ورود"
+              class="bg-orange-Secondary cursor-pointer hover:bg-black_Secondary hover:text-white transition-all duration-300 px-4 py-2 rounded-lg"
+            />
+            <button
+              class="text-orange-Secondary hover:text-black_Secondary hover:underline transition-all duration-300"
+            >
+              رمز عبور خود را فراموش کرده اید؟
+            </button>
+          </div>
+
+          <span class="mt-16">
+            <a
+              class="mx-8 bg-orange-Secondary cursor-pointer hover:bg-black_Secondary hover:text-white transition-all duration-300 px-4 py-2 rounded-lg"
+              href="./register.html"
+              >اگر قبلا ثبت نام نکرده اید،ثبت نام کنید.</a
+            >
+          </span>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

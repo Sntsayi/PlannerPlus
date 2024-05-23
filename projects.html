@@ -18,7 +18,7 @@
           <select
             id="state"
             value="active"
-            class="p-3 rounded-lg text-gray-SecondaryColor"
+            class="p-3 rounded-lg text-gray-SecondaryColor cursor-pointer"
           >
             <option value="active" readonly>پروژه های فعال</option>
             <option value="">سیر همت</option>
@@ -31,7 +31,7 @@
       <div class="flex flex-col gap-4">
         <!-- project -->
         <div
-          class="bg-gray-SecondaryColor p-3 pl-5 mt-8 rounded-xl flex justify-between items-center"
+          class="bg-black_Secondary3 p-3 pl-5 mt-8 rounded-xl flex justify-between items-center"
         >
           <!-- rightComponent -->
           <div class="flex">
@@ -45,7 +45,8 @@
             <div class="flex flex-col gap-2 mr-3">
               <div class="flex items-center gap-2">
                 <span class="text-lg font-semibold">نام پروژه</span>
-                <span class="bg-blue-800 rounded-xl p-2 text-sm font-semibold"
+                <span
+                  class="bg-black_Secondary rounded-xl p-2 text-sm font-semibold"
                   >صاحب پروژه</span
                 >
               </div>
@@ -55,8 +56,9 @@
                 1402:05:06</span
               >
               <div>
-                <span class="bg-gray-600 p-2 px-4 rounded-xl inline-block"
-                  >مشتری</span
+                <span
+                  class="bg-black_Secondary p-2 px-4 rounded-xl inline-block"
+                  >اعضای تیم</span
                 >
               </div>
               <div class="flex">
@@ -88,73 +90,52 @@
           <!-- centerComponenr -->
           <div class="">
             <div
-              class="grid grid-cols-6 [&>*]:rounded-full [&>*]:bg-red-600 [&>*]:p-1 [&>*]:px-3"
+              class="grid grid-cols-6 [&>*]:rounded-full [&>*]:p-1 [&>*]:text-black [&>*]:text-sm [&>*]:px-3"
             >
-              <span>1</span>
-              <span>2</span>
-              <span>3</span>
-              <span>4</span>
-              <span>5</span>
-              <span>6</span>
-              <span>7</span>
+              <span class="bg-red-600">1</span>
+              <span class="bg-red-600">2</span>
+              <span class="bg-red-600">3</span>
+              <span class="bg-red-600">4</span>
+              <span class="bg-gray-200">5</span>
+              <span class="bg-gray-200">6</span>
+              <span class="bg-gray-200">7</span>
             </div>
             <div
               class="grid grid-cols-2 gap-1 [&>*]:rounded-lg [&>*]:p-2 [&>*]:px-1 [&>*]:text-center [&>*:nth-child(odd)]:border-none [&>*:nth-child(4)]:border-none mt-3"
             >
-              <span class="bg-blue-600">1</span>
+              <span class="border border-red-500 bg-black_Secondary">1</span>
               <span class="border-2 border-orange-400">0</span>
-              <span class="bg-green-600">49</span>
-              <span class="bg-red-600">5</span>
+              <span class="bg-black_Secondary border border-green-500">49</span>
+              <span class="bg-black_Secondary">5</span>
             </div>
           </div>
           <!-- centerComponenr -->
 
           <!-- leftComponent -->
-          <div class="">
+          <div class="flex flex-col gap-8">
             <div
-              class="flex gap-1 [&>*]:text-xl [&>*]:cursor-pointer [&>*]:p-0.5 [&>*]:px-1.5 [&>*]:rounded-lg"
+              class="flex gap-1 [&>*]:text-xl [&>*]:cursor-pointer [&>*]:bg-black_Secondary [&>*]:text-white [&>*]:border-3 [&>*]:border-black_Secondary [&>*]:p-0.5 [&>*]:px-1.5 [&>*]:rounded-lg"
             >
-              <i class="fa-regular fa-eye bg-green-600"></i>
-              <i
-                class="fa-regular fa-file text-purple-600 border-2 border-purple-600"
-              ></i>
-              <i
-                class="fa-regular fa-message text-blue-500 border-2 border-blue-500"
-              ></i>
-              <i
-                class="fa-solid fa-check text-green-300 border-2 border-green-300"
-              ></i>
-              <i
-                class="fa-solid fa-key text-orange-400 border-2 border-orange-500"
-              ></i>
-              <i class="fa-solid fa-ellipsis-vertical"></i>
+              <i class="fa-regular fa-eye"></i>
+              <i class="fa-regular fa-file"></i>
+              <i class="fa-regular fa-message"></i>
+              <i class="fa-solid fa-check"></i>
+              <i class="fa-solid fa-key"></i>
+              <i class="fa-solid fa-ellipsis-vertical bg-transparent"></i>
             </div>
 
-            <div class="mt-2">
+            <div class="">
               <!--  -->
-              <div class="flex flex-col gap-1">
+              <div class="flex flex-col gap-3 mt-1">
                 <div class="flex justify-between text-sm">
                   <span class="text-sm">میزان رضایت مشتری</span>
                   <span
-                    class="px-2 py-0.5 bg-green-500 text-green-700 rounded-md"
+                    class="px-2 py-0.5 bg-black_Secondary text-white rounded-md"
                     >0%</span
                   >
                 </div>
                 <span
-                  class="border border-b-6 border-gray-200 inline-block text-left rounded-lg relative before:absolute before:-top-0.5 before:-left-0.5 before:rounded-lg before:border before:border-b-8 before:border-orange-Secondary before:w-4/5"
-                ></span>
-              </div>
-              <!--  -->
-              <div class="flex flex-col gap-1 mt-1">
-                <div class="flex justify-between text-sm">
-                  <span class="text-sm">میزان رضایت مشتری</span>
-                  <span
-                    class="px-2 py-0.5 bg-orange-500 text-orange-700 rounded-md"
-                    >0%</span
-                  >
-                </div>
-                <span
-                  class="border border-b-6 border-gray-200 inline-block text-left rounded-lg relative before:absolute before:-top-0.5 before:-left-0.5 before:rounded-lg before:border before:border-b-8 before:border-orange-Secondary before:w-4/5"
+                  class="border border-b-6 border-gray-200 inline-block text-left rounded-lg relative before:absolute before:-top-0.5 before:-left-0.5 before:rounded-lg before:border before:border-b-8 before:border-black_Secondary before:w-4/5"
                 ></span>
               </div>
 
@@ -162,25 +143,13 @@
               <div class="flex flex-col gap-1 mt-1">
                 <div class="flex justify-between text-sm">
                   <span class="text-sm">میزان رضایت مشتری</span>
-                  <span class="px-2 py-0.5 bg-blue-300 text-blue-500 rounded-md"
+                  <span
+                    class="px-2 py-0.5 bg-black_Secondary text-white rounded-md"
                     >0%</span
                   >
                 </div>
                 <span
-                  class="border border-b-6 border-gray-200 inline-block text-left rounded-lg relative before:absolute before:-top-0.5 before:-left-0.5 before:rounded-lg before:border before:border-b-8 before:border-orange-Secondary before:w-4/5"
-                ></span>
-              </div>
-
-              <!--  -->
-              <div class="flex flex-col gap-1 mt-1">
-                <div class="flex justify-between text-sm">
-                  <span class="text-sm">میزان رضایت مشتری</span>
-                  <span class="px-2 py-0.5 bg-red-500 text-red-700 rounded-md"
-                    >0%</span
-                  >
-                </div>
-                <span
-                  class="border border-b-6 border-gray-200 inline-block text-left rounded-lg relative before:absolute before:-top-0.5 before:-left-0.5 before:rounded-lg before:border before:border-b-8 before:border-orange-Secondary before:w-4/5"
+                  class="border border-b-6 border-gray-200 inline-block text-left rounded-lg relative before:absolute before:-top-0.5 before:-left-0.5 before:rounded-lg before:border before:border-b-8 before:border-black_Secondary before:w-4/5"
                 ></span>
               </div>
             </div>
@@ -191,7 +160,7 @@
 
         <!-- project -->
         <div
-          class="bg-gray-SecondaryColor p-3 pl-5 rounded-xl flex justify-between items-center"
+          class="bg-black_Secondary3 p-3 pl-5 mt-8 rounded-xl flex justify-between items-center"
         >
           <!-- rightComponent -->
           <div class="flex">
@@ -205,7 +174,8 @@
             <div class="flex flex-col gap-2 mr-3">
               <div class="flex items-center gap-2">
                 <span class="text-lg font-semibold">نام پروژه</span>
-                <span class="bg-blue-800 rounded-xl p-2 text-sm font-semibold"
+                <span
+                  class="bg-black_Secondary rounded-xl p-2 text-sm font-semibold"
                   >صاحب پروژه</span
                 >
               </div>
@@ -215,8 +185,9 @@
                 1402:05:06</span
               >
               <div>
-                <span class="bg-gray-600 p-2 px-4 rounded-xl inline-block"
-                  >مشتری</span
+                <span
+                  class="bg-black_Secondary p-2 px-4 rounded-xl inline-block"
+                  >اعضای تیم</span
                 >
               </div>
               <div class="flex">
@@ -248,73 +219,52 @@
           <!-- centerComponenr -->
           <div class="">
             <div
-              class="grid grid-cols-6 [&>*]:rounded-full [&>*]:bg-red-600 [&>*]:p-1 [&>*]:px-3"
+              class="grid grid-cols-6 [&>*]:rounded-full [&>*]:p-1 [&>*]:text-black [&>*]:text-sm [&>*]:px-3"
             >
-              <span>1</span>
-              <span>2</span>
-              <span>3</span>
-              <span>4</span>
-              <span>5</span>
-              <span>6</span>
-              <span>7</span>
+              <span class="bg-red-600">1</span>
+              <span class="bg-red-600">2</span>
+              <span class="bg-red-600">3</span>
+              <span class="bg-red-600">4</span>
+              <span class="bg-gray-200">5</span>
+              <span class="bg-gray-200">6</span>
+              <span class="bg-gray-200">7</span>
             </div>
             <div
               class="grid grid-cols-2 gap-1 [&>*]:rounded-lg [&>*]:p-2 [&>*]:px-1 [&>*]:text-center [&>*:nth-child(odd)]:border-none [&>*:nth-child(4)]:border-none mt-3"
             >
-              <span class="bg-blue-600">1</span>
+              <span class="border border-red-500 bg-black_Secondary">1</span>
               <span class="border-2 border-orange-400">0</span>
-              <span class="bg-green-600">49</span>
-              <span class="bg-red-600">5</span>
+              <span class="bg-black_Secondary border border-green-500">49</span>
+              <span class="bg-black_Secondary">5</span>
             </div>
           </div>
           <!-- centerComponenr -->
 
           <!-- leftComponent -->
-          <div class="">
+          <div class="flex flex-col gap-8">
             <div
-              class="flex gap-1 [&>*]:text-xl [&>*]:cursor-pointer [&>*]:p-0.5 [&>*]:px-1.5 [&>*]:rounded-lg"
+              class="flex gap-1 [&>*]:text-xl [&>*]:cursor-pointer [&>*]:bg-black_Secondary [&>*]:text-white [&>*]:border-3 [&>*]:border-black_Secondary [&>*]:p-0.5 [&>*]:px-1.5 [&>*]:rounded-lg"
             >
-              <i class="fa-regular fa-eye bg-green-600"></i>
-              <i
-                class="fa-regular fa-file text-purple-600 border-2 border-purple-600"
-              ></i>
-              <i
-                class="fa-regular fa-message text-blue-500 border-2 border-blue-500"
-              ></i>
-              <i
-                class="fa-solid fa-check text-green-300 border-2 border-green-300"
-              ></i>
-              <i
-                class="fa-solid fa-key text-orange-400 border-2 border-orange-500"
-              ></i>
-              <i class="fa-solid fa-ellipsis-vertical"></i>
+              <i class="fa-regular fa-eye"></i>
+              <i class="fa-regular fa-file"></i>
+              <i class="fa-regular fa-message"></i>
+              <i class="fa-solid fa-check"></i>
+              <i class="fa-solid fa-key"></i>
+              <i class="fa-solid fa-ellipsis-vertical bg-transparent"></i>
             </div>
 
-            <div class="mt-2">
+            <div class="">
               <!--  -->
-              <div class="flex flex-col gap-1">
+              <div class="flex flex-col gap-3 mt-1">
                 <div class="flex justify-between text-sm">
                   <span class="text-sm">میزان رضایت مشتری</span>
                   <span
-                    class="px-2 py-0.5 bg-green-500 text-green-700 rounded-md"
+                    class="px-2 py-0.5 bg-black_Secondary text-white rounded-md"
                     >0%</span
                   >
                 </div>
                 <span
-                  class="border border-b-6 border-gray-200 inline-block text-left rounded-lg relative before:absolute before:-top-0.5 before:-left-0.5 before:rounded-lg before:border before:border-b-8 before:border-orange-Secondary before:w-4/5"
-                ></span>
-              </div>
-              <!--  -->
-              <div class="flex flex-col gap-1 mt-1">
-                <div class="flex justify-between text-sm">
-                  <span class="text-sm">میزان رضایت مشتری</span>
-                  <span
-                    class="px-2 py-0.5 bg-orange-500 text-orange-700 rounded-md"
-                    >0%</span
-                  >
-                </div>
-                <span
-                  class="border border-b-6 border-gray-200 inline-block text-left rounded-lg relative before:absolute before:-top-0.5 before:-left-0.5 before:rounded-lg before:border before:border-b-8 before:border-orange-Secondary before:w-4/5"
+                  class="border border-b-6 border-gray-200 inline-block text-left rounded-lg relative before:absolute before:-top-0.5 before:-left-0.5 before:rounded-lg before:border before:border-b-8 before:border-black_Secondary before:w-4/5"
                 ></span>
               </div>
 
@@ -322,25 +272,13 @@
               <div class="flex flex-col gap-1 mt-1">
                 <div class="flex justify-between text-sm">
                   <span class="text-sm">میزان رضایت مشتری</span>
-                  <span class="px-2 py-0.5 bg-blue-300 text-blue-500 rounded-md"
+                  <span
+                    class="px-2 py-0.5 bg-black_Secondary text-white rounded-md"
                     >0%</span
                   >
                 </div>
                 <span
-                  class="border border-b-6 border-gray-200 inline-block text-left rounded-lg relative before:absolute before:-top-0.5 before:-left-0.5 before:rounded-lg before:border before:border-b-8 before:border-orange-Secondary before:w-4/5"
-                ></span>
-              </div>
-
-              <!--  -->
-              <div class="flex flex-col gap-1 mt-1">
-                <div class="flex justify-between text-sm">
-                  <span class="text-sm">میزان رضایت مشتری</span>
-                  <span class="px-2 py-0.5 bg-red-500 text-red-700 rounded-md"
-                    >0%</span
-                  >
-                </div>
-                <span
-                  class="border border-b-6 border-gray-200 inline-block text-left rounded-lg relative before:absolute before:-top-0.5 before:-left-0.5 before:rounded-lg before:border before:border-b-8 before:border-orange-Secondary before:w-4/5"
+                  class="border border-b-6 border-gray-200 inline-block text-left rounded-lg relative before:absolute before:-top-0.5 before:-left-0.5 before:rounded-lg before:border before:border-b-8 before:border-black_Secondary before:w-4/5"
                 ></span>
               </div>
             </div>

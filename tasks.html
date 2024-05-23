@@ -13,7 +13,7 @@
         >
         <button
           id="addNewTask"
-          class="addNewTask px-4 py-3 bg-gray-400 font-semibold rounded-lg"
+          class="addNewTask px-4 py-3 bg-orange-Secondary hover:bg-black_Secondary2 transition-all duration-200 font-semibold rounded-lg"
         >
           افزودن تسک جدید
         </button>
@@ -21,7 +21,7 @@
       <!-- for newTask window -->
 
       <div
-        class="newTaskWindow translate-x-400% transition-all duration-700 ease-linear p-8 absolute top-5 w-3/5 h-4/5 z-50 rounded-lg bg-black"
+        class="newTaskWindow bg-black_Secondary translate-x-400% addNewWindowMode h-65%"
       >
         <div class="text-lg font-bold flex justify-between">
           <span>ایجاد تسک جدید</span>
@@ -32,10 +32,7 @@
         <form action="#" id="submitForm">
           <div class="mt-5 grid grid-cols-3 gap-2">
             <div class="flex flex-col">
-              <label for="" class="inline-block py-2"
-                >مربوط به کاربر :
-                <sup class="text-xl font-extrabold text-red-500">*</sup></label
-              >
+              <label for="" class="inline-block py-2">مربوط به کاربر : </label>
               <select
                 id="countries"
                 required
@@ -53,40 +50,38 @@
             <div class="flex flex-col">
               <label for="" class="inline-block py-2"
                 >مهلت انجام :
-                <sup class="text-xl font-extrabold text-red-500">*</sup></label
+                <sup class="text-base font-extrabold text-red-500"
+                  >*</sup
+                ></label
               >
               <input
                 type="text"
                 required
                 id="elementId"
-                class="px-2 py-1.5 rounded-lg text-red-600 outline-none text-left"
+                class="px-2 py-1.5 rounded-lg text-black accent-black outline-none text-left"
               />
             </div>
 
             <div class="flex flex-col">
-              <label for="" class="inline-block py-2"
-                >زمان شروع نمایش :
-                <sup class="text-xl font-extrabold text-red-500">*</sup></label
-              >
+              <label for="" class="inline-block py-2">زمان شروع نمایش : </label>
               <input
                 type="text"
                 required
                 id="elementId1"
-                class="px-2 py-1.5 rounded-lg text-red-600 outline-none text-left"
+                class="px-2 py-1.5 rounded-lg text-black accent-black outline-none text-left"
               />
             </div>
 
             <div class="flex flex-col">
               <label for="" class="inline-block py-2">
                 اولویت(بالاترین) :
-                <sup class="text-xl font-extrabold text-red-500">*</sup></label
-              >
+              </label>
 
               <select
                 required
                 name=""
                 id=""
-                class="px-2 py-1.5 rounded-lg text-red-600 outline-none"
+                class="px-2 py-1.5 rounded-lg text-black accent-black outline-none"
               >
                 <option value="">خیلی زیاد</option>
                 <option value="">زیاد</option>
@@ -98,26 +93,25 @@
             <div class="flex flex-col">
               <label for="" class="inline-block py-2">
                 موضوع تسک :
-                <sup class="text-xl font-extrabold text-red-500">*</sup></label
+                <sup class="text-base font-extrabold text-red-500"
+                  >*</sup
+                ></label
               >
               <input
                 required
                 type="text"
-                class="px-2 py-1.5 rounded-lg text-red-600 outline-none"
+                class="px-2 py-1.5 rounded-lg text-black accent-black outline-none"
               />
             </div>
 
             <div class="flex flex-col">
-              <label for="" class="inline-block py-2"
-                >مربوط به پروژه :
-                <sup class="text-xl font-extrabold text-red-500">*</sup></label
-              >
+              <label for="" class="inline-block py-2">مربوط به پروژه : </label>
               <select
                 value="2"
                 name="#"
                 required
                 id="#"
-                class="px-2 py-1.5 rounded-lg text-red-600 outline-none cursor-pointer"
+                class="px-2 py-1.5 rounded-lg text-black accent-black outline-none cursor-pointer"
               >
                 <option value="2">وب دیزاین</option>
                 <option value="1">سیر همت</option>
@@ -125,42 +119,37 @@
                 <option value="4">سئو خانومی</option>
               </select>
             </div>
-
-            <div class="flex flex-col">
-              <label for="" class="inline-block py-2"
-                >پیوست :
-                <sup class="text-xl font-extrabold text-red-500">*</sup></label
-              >
-              <input
-                required
-                type="file"
-                class="px-2 py-1.5 rounded-lg text-red-600 outline-none"
-              />
-            </div>
           </div>
 
-          <div>
-            <div class="flex flex-col">
-              <label for="" class="inline-block py-2"
-                >توضیحات( در حد دو سطر ) :
-                <sup class="text-xl font-extrabold text-red-500">*</sup>
-              </label>
-              <textarea
-                name=""
-                id=""
-                required
-                type="text"
-                class="px-2 py-1.5 rounded-lg text-red-600 outline-none resize-none"
-                cols="8"
-                rows="8"
-              ></textarea>
-            </div>
+          <div class="flex flex-col mt-6">
+            <label for="" class="inline-block py-2"
+              >توضیحات( در حد دو سطر ) :
+            </label>
+            <textarea
+              name=""
+              id=""
+              required
+              type="text"
+              class="px-2 py-1.5 rounded-lg text-black accent-black outline-none resize-none"
+              cols="8"
+              rows="8"
+            ></textarea>
           </div>
+
+          <div class="flex flex-col mt-3">
+            <label for="" class="inline-block p-2">پیوست : </label>
+            <input
+              required
+              type="file"
+              class="px-2 py-1.5 rounded-lg text-red-500 accent-black outline-none"
+            />
+          </div>
+
           <div class="text-center mt-10">
             <input
               value="افزودن"
               type="submit"
-              class="px-5 py-4 bg-red-600 rounded-lg text-white font-bold text-base hover:bg-slate-400 transition-all duration-300"
+              class="px-5 py-4 cursor-pointer bg-orange-Secondary rounded-lg text-white font-bold text-base hover:bg-slate-400 transition-all duration-300"
             />
           </div>
         </form>
@@ -168,7 +157,7 @@
       <!-- for newTask window -->
 
       <section
-        class="centerElements mt-9 grid grid-cols-2 gap-3 [&>*]:bg-gray-SecondaryColor [&>*]:rounded-md [&>*]:p-2 [&>*]:pt-3"
+        class="centerElements mt-9 grid grid-cols-2 gap-3 [&>*]:bg-black_Secondary3 [&>*]:rounded-md [&>*]:p-2 [&>*]:pt-3"
       >
         <!-- will  -->
         <div>
@@ -188,7 +177,7 @@
           <!-- boxes -->
           <div class="boxes flex flex-col">
             <!-- box -->
-            <div class="bg-black p-2 rounded-xl mt-4">
+            <div class="bg-black_Secondary p-2 rounded-xl mt-4">
               <div class="flex justify-between items-center">
                 <button class="text-2xl font-bold">...</button>
                 <div class="relative">
@@ -210,22 +199,26 @@
               <div
                 class="flex gap-2 [&>*]:p-2 [&>*]:rounded-md [&>*]:inline-block my-3"
               >
-                <span class="bg-blue-500">درج محتوا</span>
-                <span class="bg-red-400 text-red-600 border border-red-700"
+                <span class="bg-black_Secondary border border-blue-500"
+                  >درج محتوا</span
+                >
+                <span class="bg-black_Secondary border border-red-700"
                   >#354545</span
                 >
-                <span class="bg-green-300">content</span>
+                <span class="bg-black_Secondary border border-green-300"
+                  >content</span
+                >
                 <div class="relative">
                   <i class="fa-regular fa-message text-2xl"></i>
                   <span
-                    class="absolute bg-purple-700 p-1 px-3 rounded-full text-white inline-block -top-3 -left-1"
+                    class="absolute bg-black_Secondary3 p-1 px-3 rounded-full text-white inline-block -top-3 -left-1"
                     >3</span
                   >
                 </div>
               </div>
 
               <span
-                class="p-3 py-1 inline-block bg-blue-400 rounded-xl my-4 mt-1"
+                class="p-3 py-1 inline-block bg-black_Secondary border border-blue-500 rounded-xl my-4 mt-1"
               >
                 <span class="text-center"
                   >در حال انجام
@@ -234,7 +227,7 @@
               </span>
 
               <div
-                class="flex gap-1 [&>*]:p-2 [&>*]:rounded-md [&>*]:bg-gray-SecondaryColor"
+                class="flex gap-1 [&>*]:p-2 [&>*]:rounded-md [&>*]:bg-black_Secondary"
               >
                 <span>1403/01/31</span>
                 <span>1403/2/25</span>
@@ -243,7 +236,7 @@
             <!-- box -->
 
             <!-- box -->
-            <div class="bg-black p-2 rounded-xl mt-4">
+            <div class="bg-black_Secondary p-2 rounded-xl mt-4">
               <div class="flex justify-between items-center">
                 <button class="text-2xl font-bold">...</button>
                 <div class="relative">
@@ -265,22 +258,26 @@
               <div
                 class="flex gap-2 [&>*]:p-2 [&>*]:rounded-md [&>*]:inline-block my-3"
               >
-                <span class="bg-blue-500">درج محتوا</span>
-                <span class="bg-red-400 text-red-600 border border-red-700"
+                <span class="bg-black_Secondary border border-blue-500"
+                  >درج محتوا</span
+                >
+                <span class="bg-black_Secondary border border-red-700"
                   >#354545</span
                 >
-                <span class="bg-green-300">content</span>
+                <span class="bg-black_Secondary border border-green-300"
+                  >content</span
+                >
                 <div class="relative">
                   <i class="fa-regular fa-message text-2xl"></i>
                   <span
-                    class="absolute bg-purple-700 p-1 px-3 rounded-full text-white inline-block -top-3 -left-1"
+                    class="absolute bg-black_Secondary3 p-1 px-3 rounded-full text-white inline-block -top-3 -left-1"
                     >3</span
                   >
                 </div>
               </div>
 
               <span
-                class="p-3 py-1 inline-block bg-blue-400 rounded-xl my-4 mt-1"
+                class="p-3 py-1 inline-block bg-black_Secondary border border-blue-500 rounded-xl my-4 mt-1"
               >
                 <span class="text-center"
                   >در حال انجام
@@ -289,7 +286,7 @@
               </span>
 
               <div
-                class="flex gap-1 [&>*]:p-2 [&>*]:rounded-md [&>*]:bg-gray-SecondaryColor"
+                class="flex gap-1 [&>*]:p-2 [&>*]:rounded-md [&>*]:bg-black_Secondary"
               >
                 <span>1403/01/31</span>
                 <span>1403/2/25</span>
@@ -317,7 +314,7 @@
           <!-- boxes -->
           <div class="flex flex-col">
             <!-- box -->
-            <div class="bg-black p-2 rounded-xl mt-4">
+            <div class="bg-black_Secondary p-2 rounded-xl mt-4">
               <div class="flex justify-between items-center">
                 <button class="text-2xl font-bold">...</button>
                 <div class="relative">
@@ -339,22 +336,26 @@
               <div
                 class="flex gap-2 [&>*]:p-2 [&>*]:rounded-md [&>*]:inline-block my-3"
               >
-                <span class="bg-blue-500">درج محتوا</span>
-                <span class="bg-red-400 text-red-600 border border-red-700"
+                <span class="bg-black_Secondary border border-blue-500"
+                  >درج محتوا</span
+                >
+                <span class="bg-black_Secondary border border-red-700"
                   >#354545</span
                 >
-                <span class="bg-green-300">content</span>
+                <span class="bg-black_Secondary border border-green-300"
+                  >content</span
+                >
                 <div class="relative">
                   <i class="fa-regular fa-message text-2xl"></i>
                   <span
-                    class="absolute bg-purple-700 p-1 px-3 rounded-full text-white inline-block -top-3 -left-1"
+                    class="absolute bg-black_Secondary3 p-1 px-3 rounded-full text-white inline-block -top-3 -left-1"
                     >3</span
                   >
                 </div>
               </div>
 
               <span
-                class="p-3 py-1 inline-block bg-blue-400 rounded-xl my-4 mt-1"
+                class="p-3 py-1 inline-block bg-black_Secondary border border-blue-500 rounded-xl my-4 mt-1"
               >
                 <span class="text-center"
                   >در حال انجام
@@ -363,7 +364,7 @@
               </span>
 
               <div
-                class="flex gap-1 [&>*]:p-2 [&>*]:rounded-md [&>*]:bg-gray-SecondaryColor"
+                class="flex gap-1 [&>*]:p-2 [&>*]:rounded-md [&>*]:bg-black_Secondary"
               >
                 <span>1403/01/31</span>
                 <span>1403/2/25</span>
@@ -390,7 +391,7 @@
           <!-- boxes -->
           <div class="flex flex-col">
             <!-- box -->
-            <div class="bg-black p-2 rounded-xl mt-4">
+            <div class="bg-black_Secondary p-2 rounded-xl mt-4">
               <div class="flex justify-between items-center">
                 <button class="text-2xl font-bold">...</button>
                 <div class="relative">
@@ -412,22 +413,26 @@
               <div
                 class="flex gap-2 [&>*]:p-2 [&>*]:rounded-md [&>*]:inline-block my-3"
               >
-                <span class="bg-blue-500">درج محتوا</span>
-                <span class="bg-red-400 text-red-600 border border-red-700"
+                <span class="bg-black_Secondary border border-blue-500"
+                  >درج محتوا</span
+                >
+                <span class="bg-black_Secondary border border-red-700"
                   >#354545</span
                 >
-                <span class="bg-green-300">content</span>
+                <span class="bg-black_Secondary border border-green-300"
+                  >content</span
+                >
                 <div class="relative">
                   <i class="fa-regular fa-message text-2xl"></i>
                   <span
-                    class="absolute bg-purple-700 p-1 px-3 rounded-full text-white inline-block -top-3 -left-1"
+                    class="absolute bg-black_Secondary3 p-1 px-3 rounded-full text-white inline-block -top-3 -left-1"
                     >3</span
                   >
                 </div>
               </div>
 
               <span
-                class="p-3 py-1 inline-block bg-blue-400 rounded-xl my-4 mt-1"
+                class="p-3 py-1 inline-block bg-black_Secondary border border-blue-500 rounded-xl my-4 mt-1"
               >
                 <span class="text-center"
                   >در حال انجام
@@ -436,7 +441,7 @@
               </span>
 
               <div
-                class="flex gap-1 [&>*]:p-2 [&>*]:rounded-md [&>*]:bg-gray-SecondaryColor"
+                class="flex gap-1 [&>*]:p-2 [&>*]:rounded-md [&>*]:bg-black_Secondary"
               >
                 <span>1403/01/31</span>
                 <span>1403/2/25</span>
@@ -463,7 +468,7 @@
           <!-- boxes -->
           <div class="flex flex-col">
             <!-- box -->
-            <div class="bg-black p-2 rounded-xl mt-4">
+            <div class="bg-black_Secondary p-2 rounded-xl mt-4">
               <div class="flex justify-between items-center">
                 <button class="text-2xl font-bold">...</button>
                 <div class="relative">
@@ -485,22 +490,26 @@
               <div
                 class="flex gap-2 [&>*]:p-2 [&>*]:rounded-md [&>*]:inline-block my-3"
               >
-                <span class="bg-blue-500">درج محتوا</span>
-                <span class="bg-red-400 text-red-600 border border-red-700"
+                <span class="bg-black_Secondary border border-blue-500"
+                  >درج محتوا</span
+                >
+                <span class="bg-black_Secondary border border-red-700"
                   >#354545</span
                 >
-                <span class="bg-green-300">content</span>
+                <span class="bg-black_Secondary border border-green-300"
+                  >content</span
+                >
                 <div class="relative">
                   <i class="fa-regular fa-message text-2xl"></i>
                   <span
-                    class="absolute bg-purple-700 p-1 px-3 rounded-full text-white inline-block -top-3 -left-1"
+                    class="absolute bg-black_Secondary3 p-1 px-3 rounded-full text-white inline-block -top-3 -left-1"
                     >3</span
                   >
                 </div>
               </div>
 
               <span
-                class="p-3 py-1 inline-block bg-blue-400 rounded-xl my-4 mt-1"
+                class="p-3 py-1 inline-block bg-black_Secondary border border-blue-500 rounded-xl my-4 mt-1"
               >
                 <span class="text-center"
                   >در حال انجام
@@ -509,7 +518,7 @@
               </span>
 
               <div
-                class="flex gap-1 [&>*]:p-2 [&>*]:rounded-md [&>*]:bg-gray-SecondaryColor"
+                class="flex gap-1 [&>*]:p-2 [&>*]:rounded-md [&>*]:bg-black_Secondary"
               >
                 <span>1403/01/31</span>
                 <span>1403/2/25</span>
@@ -518,7 +527,7 @@
             <!-- box -->
 
             <!-- box -->
-            <div class="bg-black p-2 rounded-xl mt-4">
+            <div class="bg-black_Secondary p-2 rounded-xl mt-4">
               <div class="flex justify-between items-center">
                 <button class="text-2xl font-bold">...</button>
                 <div class="relative">
@@ -540,22 +549,26 @@
               <div
                 class="flex gap-2 [&>*]:p-2 [&>*]:rounded-md [&>*]:inline-block my-3"
               >
-                <span class="bg-blue-500">درج محتوا</span>
-                <span class="bg-red-400 text-red-600 border border-red-700"
+                <span class="bg-black_Secondary border border-blue-500"
+                  >درج محتوا</span
+                >
+                <span class="bg-black_Secondary border border-red-700"
                   >#354545</span
                 >
-                <span class="bg-green-300">content</span>
+                <span class="bg-black_Secondary border border-green-300"
+                  >content</span
+                >
                 <div class="relative">
                   <i class="fa-regular fa-message text-2xl"></i>
                   <span
-                    class="absolute bg-purple-700 p-1 px-3 rounded-full text-white inline-block -top-3 -left-1"
+                    class="absolute bg-black_Secondary3 p-1 px-3 rounded-full text-white inline-block -top-3 -left-1"
                     >3</span
                   >
                 </div>
               </div>
 
               <span
-                class="p-3 py-1 inline-block bg-blue-400 rounded-xl my-4 mt-1"
+                class="p-3 py-1 inline-block bg-black_Secondary border border-blue-500 rounded-xl my-4 mt-1"
               >
                 <span class="text-center"
                   >در حال انجام
@@ -564,7 +577,7 @@
               </span>
 
               <div
-                class="flex gap-1 [&>*]:p-2 [&>*]:rounded-md [&>*]:bg-gray-SecondaryColor"
+                class="flex gap-1 [&>*]:p-2 [&>*]:rounded-md [&>*]:bg-black_Secondary"
               >
                 <span>1403/01/31</span>
                 <span>1403/2/25</span>

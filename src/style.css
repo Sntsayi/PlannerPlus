@@ -2,12 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: "IRANSans UltraLight";
+    src: url("https://db.onlinewebfonts.com/t/0253fcc956e8d984206217136198fe5b.eot");
+    src: url("https://db.onlinewebfonts.com/t/0253fcc956e8d984206217136198fe5b.eot?#iefix")
+        format("embedded-opentype"),
+      url("https://db.onlinewebfonts.com/t/0253fcc956e8d984206217136198fe5b.woff2")
+        format("woff2"),
+      url("https://db.onlinewebfonts.com/t/0253fcc956e8d984206217136198fe5b.woff")
+        format("woff"),
+      url("https://db.onlinewebfonts.com/t/0253fcc956e8d984206217136198fe5b.ttf")
+        format("truetype"),
+      url("https://db.onlinewebfonts.com/t/0253fcc956e8d984206217136198fe5b.svg#IRANSans UltraLight")
+        format("svg");
+  }
+}
+
 @layer components {
   .btn-click {
     @apply bg-gray-SecondaryColor text-white border-l-6 rounded-sm border-orange-Secondary;
   }
   .btn-hover {
     @apply bg-gray-SecondaryColor text-white;
+  }
+  .addNewWindowMode {
+    @apply transition-all duration-700 ease-linear p-8 pt-12 absolute top-5 w-3/5  z-50 rounded-lg bg-black;
   }
 
   /* .tooltip {
